@@ -16,7 +16,6 @@ const Laptop = () => {
   const textRefs = useRef<(HTMLParagraphElement | null)[]>(
     Array(phrases.length).fill(null)
   );
-  const [animationEnded, setAnimationEnded] = useState(false);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -45,8 +44,15 @@ const Laptop = () => {
         start: "bottom top-=600x",
         end: "bottom top-=1800px",
         scrub: true,
-        onLeave: () => setAnimationEnded(true),
-        onEnterBack: () => setAnimationEnded(false),
+      },
+    });
+
+    const tl4 = gsap.timeline({
+      scrollTrigger: {
+        trigger: laptopWrapRef.current,
+        start: "bottom top-=1800px",
+        end: "bottom top-=2500px",
+        scrub: true,
       },
     });
 
@@ -129,32 +135,32 @@ const Laptop = () => {
         scale: 0.4,
         duration: 1,
         ease: "none",
-      },
-      "<"
+      }
+      // "<"
     );
 
     // LAPTOP SZOOMING IN AGAIN ANIMATION
     tl2.to(laptopWrapRef.current, { scale: 2.2, duration: 3, ease: "" }, "=+1");
 
     // SVG-Animation (Dauer: 3 Sekunden)
-    tl3.to(svgRef.current, { x: "100%", duration: 3, ease: "" });
-    
+    tl3.to(svgRef.current, { x: "95%", duration: 3, ease: "" });
+
     // KARTEN SLIDE OUT ANIMATION
     cards.forEach((card, index) => {
       const cardElement = cardRefs.current[index];
 
       tl3.to(cardElement, { x: "100%", duration: 3, ease: "" }, "<");
 
-    // Hintergrundfarbe ändern (Dauer: 3 Sekunden)
-    tl3.to(
-      sectionRef.current,
-      {
-        backgroundColor: "black",
-        duration: 3,
-        ease: "",
-      },
-      "<"
-    );
+      // Hintergrundfarbe ändern (Dauer: 3 Sekunden)
+      tl3.to(
+        sectionRef.current,
+        {
+          backgroundColor: "black",
+          duration: 3,
+          ease: "",
+        },
+        "<"
+      );
     });
 
     // TEXT APPEARING ANIMATION (Verzögerung: 3 Sekunden nach Abschluss der SVG-Animation)
@@ -166,27 +172,48 @@ const Laptop = () => {
         x: "0px",
         ease: "none",
         duration: 5,
-        stagger: 1,
+        stagger: 2,
       },
       "+=3"
+    );
+
+    phrases.forEach((_, index) => {
+      // Starten der Animation für das aktuelle Element
+      tl4.to(
+        textRefs.current[index],
+        {
+          opacity: 1,
+          duration: 0.3,
+          snap: {
+            opacity: 0.5, // Hier wird die Opacity auf 0.5 gesnapped
+          },
+        },
+        index * 0.3
+      );
+
+      // Zurücksetzen der Opacity für das vorherige Element
+      if (index > 0) {
+        tl4.to(
+          textRefs.current[index - 1],
+          {
+            opacity: 0.5,
+          },
+          "<"
+        );
+      }
+    });
+
+    tl4.set(
+      textRefs.current[phrases.length - 1],
+      {
+        opacity: 0.5,
+      }
     );
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
-
-  const handleMouseEnter = (index) => {
-    if (animationEnded) {
-      gsap.to(textRefs.current[index], { opacity: 1, duration: 0.3 });
-    }
-  };
-
-  const handleMouseLeave = (index) => {
-    if (animationEnded) {
-      gsap.to(textRefs.current[index], { opacity: 0.5, duration: 0.3 });
-    }
-  };
 
   return (
     <section
@@ -196,7 +223,7 @@ const Laptop = () => {
       <div
         ref={laptopWrapRef}
         style={{ zIndex: 40 }}
-        className="relative h-[75%] w-[100vh] flex items-center justify-center bg-yellow-200"
+        className="relative h-[75%] w-[100vh] flex items-center justify-center"
       >
         <div className="absolute h-[756px] w-[1260px] items-center justify-center flex overflow-visible">
           <Image
@@ -230,7 +257,7 @@ const Laptop = () => {
 
         <div
           style={{ zIndex: 90 }}
-          className="absolute left-[5%] text-white text-[12px] uppercase space-y-4 w-[25%]"
+          className="absolute left-[5%] text-white text-[12px] uppercase space-y-4 w-[30%]"
         >
           {phrases.map((phrase, index) => {
             return (
@@ -238,8 +265,6 @@ const Laptop = () => {
                 key={index}
                 ref={(el) => (textRefs.current[index] = el)}
                 className="cursor-pointer slidingtext"
-                onMouseEnter={() => handleMouseEnter(index)}
-                onMouseLeave={() => handleMouseLeave(index)}
               >
                 {phrase}
               </p>
@@ -269,7 +294,7 @@ const Laptop = () => {
                 position: "absolute",
                 opacity: 0,
                 zIndex: 90,
-                transformOrigin: transformOrigin, // Direkte Anwendung der Transformation
+                transformOrigin: transformOrigin,
               }}
             />
           );

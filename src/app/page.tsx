@@ -16,7 +16,7 @@ export default function Home() {
     <main className="h-[2500px] bg-gray-200">
       <div className="">
         <Laptop />
-        <div className="h-[3500px] bg-gray-200"></div>
+        <div className="h-[4000px] bg-gray-200"></div>
       </div>
 
       <div className="w-full flex flex-col">

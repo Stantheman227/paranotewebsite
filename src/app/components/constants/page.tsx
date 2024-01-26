@@ -30,9 +30,9 @@ export const cards = [
 ];
 
 export const phrases = [
-  "Paragrafen werden", // In der PDF werden alle Paragrafen farblich markiert animation
-  "Persönliche Notizfunktion mit Kategorisierung",
-  "Synchronisation von Notizen über mehrere Geräte",
+  "Paragrafen werden extrahiert",
+  "Gesetzestext zu extrahierten Paragrafen wird angezeigt",
+  "Browser-Plugin für Extraktion von Paragrafen auf Webseiten",
   "Integrierte Suchfunktion für Rechtsprechung und Kommentare",
   "Automatische Aktualisierung mit den neuesten Rechtsänderungen",
   "Möglichkeit, eigene Fälle und Lösungen zu speichern und zu teilen",

@@ -19,7 +19,7 @@ const Laptop = () => {
   const svgCircleRef = useRef<SVGRectElement>(null);
   const svgRef2 = useRef<HTMLDivElement>(null);
   const popUpRef = useRef<HTMLDivElement>(null);
-  const HighlightedTextRef = useRef<HTMLDivElement>(null);
+  const highlightedTextRef = useRef<HTMLDivElement>(null);
 
   const textRefs = useRef<(HTMLParagraphElement | null)[]>(
     Array(phrases.length).fill(null)
@@ -98,11 +98,7 @@ const Laptop = () => {
         },
         "=-2"
       ) // ADD TYPEWRITER HIDDEN AT THE END OF TIMELINE 1
-      .to(
-        typewriterRef.current,
-        { visibility: "hidden" }, 
-        "=-2"
-      );
+      .to(typewriterRef.current, { visibility: "hidden" }, "=-2");
 
     // KARTEN POP IN ANIMATION (Position)
     cards.forEach((card, index) => {
@@ -276,7 +272,7 @@ const Laptop = () => {
       svgRef2.current,
       {
         opacity: 0,
-        duration: 0.5,
+        duration: 0.25,
         ease: "",
       },
       7
@@ -285,13 +281,13 @@ const Laptop = () => {
     // HIGHLIGHTED TEXT FADES IN
 
     tl4.to(
-      HighlightedTextRef.current,
+      highlightedTextRef.current,
       {
         opacity: 1,
-        duration: 0.5,
+        duration: 0.25,
         ease: "",
       },
-      7.5
+      7
     );
 
     return () => {
@@ -394,15 +390,6 @@ const Laptop = () => {
                 style={{ zIndex: 50 }}
                 className="rounded-sm absolute opacity-0"
               />
-              <div
-                ref={HighlightedTextRef}
-                style={{ zIndex: 90 }}
-                className="absolute opacity-0 scale-50"
-              >
-                <div className="h-full flex items-center justify-center">
-                  <HighlightedText />
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -427,6 +414,19 @@ const Laptop = () => {
               </p>
             );
           })}
+        </div>
+
+        <div
+          ref={highlightedTextRef}
+          style={{ zIndex: 90 }}
+          className="absolute opacity-0 scale-50"
+        >
+          <div
+            style={{ zIndex: 90 }}
+            className="h-full flex items-center justify-center"
+          >
+            <HighlightedText />
+          </div>
         </div>
 
         <div

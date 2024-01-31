@@ -2,28 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Cubic";
+  src: url("/fonts/Cubic.ttf") format("truetype");
+  /* Pfade und Dateinamen entsprechend anpassen */
+}
 
 html {
   background-color: "";
 }
 
 .text-element {
-  opacity: 0.5; 
-  transition: opacity 0.3s ease
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
 }
 
 .text-element:hover {
-  opacity: 1; 
+  opacity: 1;
 }
 
 .gradient-text {
-  background: linear-gradient(to bottom,  white, #6E6AF6);
+  background: linear-gradient(to bottom, white, #6e6af6);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-
 .gradient-back {
-  background: linear-gradient(to bottom, white, #6E6AF6)
+  background: linear-gradient(to bottom, white, #6e6af6);
+}
+
+.nicefont {
+  background-image: url("https://cdn.pixabay.com/photo/2013/04/13/23/56/cambridge-103478_1280.jpg");
+  background-size: cover;
+  background-clip: text;
+  font: 200px "Cubic";
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@font-face {
+  font-family: "SF-Compact";
+  src: url("/fonts/Sf-Compact.ttf") format("truetype");
+  /* Pfade und Dateinamen entsprechend anpassen */
+}
+
+/* Verbergen der Scrollleiste */
+.noScrollBarContainer::-webkit-scrollbar {
+  width: 0.25rem; /* Breite auf 0 setzen */
+}
+
+/* Verbergen des Scrollleisten-Daumen (Griff) */
+.noScrollBarContainer::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+/* Verbergen des Scrollleisten-Tracks (Schienen) */
+.noScrollBarContainer::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Grundstil für den HighlitedText*/
+.animatedText {
+  color: white;
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pseudo-Element nach dem HighlightedText */
+.animatedPseudo {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(25, 25, 202);
+  overflow: hidden;
+  transition: left 0.4s;
 }

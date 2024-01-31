@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e52421;
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+  </defs>
+  <g id="Ebene_1-2" data-name="Ebene 1">
+    <g>
+      <rect id="Rectangle_490" data-name="Rectangle 490" class="cls-1" width="30" height="30" rx="5" ry="5"/>
+      <g id="Icon_feather-minimize-2" data-name="Icon feather-minimize-2">
+        <path id="Path_65" data-name="Path 65" class="cls-2" d="M8.28,16.68h5.04v5.04"/>
+        <path id="Path_66" data-name="Path 66" class="cls-2" d="M21.72,13.32h-5.04v-5.04"/>
+        <path id="Path_67" data-name="Path 67" class="cls-2" d="M16.68,13.32l5.88-5.88"/>
+        <path id="Path_68" data-name="Path 68" class="cls-2" d="M7.44,22.56l5.88-5.88"/>
+      </g>
+    </g>
+  </g>
+</svg>

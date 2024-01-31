@@ -46,7 +46,7 @@ export default function ParanoteTypewriter() {
                 200, // Waits 2s
               ]}
               cursor={true}
-              className="text-[100px] font-thin text-white"
+              className="text-[100px] font-thiner text-white"
             />{" "}
           </div>
         </div>

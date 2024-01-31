@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: .6;
+      }
+
+      .cls-2 {
+        fill: #f3a449;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10 {
+        stroke-width: 0px;
+      }
+
+      .cls-3 {
+        fill: #f2f2f2;
+      }
+
+      .cls-4 {
+        fill: #7a7a7a;
+      }
+
+      .cls-5 {
+        fill: #7a7cba;
+      }
+
+      .cls-6 {
+        fill: #7ac8cc;
+      }
+
+      .cls-7 {
+        fill: #a27db7;
+      }
+
+      .cls-8 {
+        fill: #fff;
+      }
+
+      .cls-9 {
+        fill: #f0a347;
+      }
+
+      .cls-10 {
+        fill: #f5f4f5;
+      }
+    </style>
+  </defs>
+  <g id="Ebene_1-2" data-name="Ebene 1">
+    <g id="Component_58_1" data-name="Component 58 1">
+      <g id="Path_119" data-name="Path 119">
+        <path class="cls-8" d="M25,29.5H5c-2.48,0-4.5-2.02-4.5-4.5V5C.5,2.52,2.52.5,5,.5h20c2.48,0,4.5,2.02,4.5,4.5v20c0,2.48-2.02,4.5-4.5,4.5Z"/>
+        <path class="cls-10" d="M5,1C2.79,1,1,2.79,1,5v20c0,2.21,1.79,4,4,4h20c2.21,0,4-1.79,4-4V5c0-2.21-1.79-4-4-4H5M5,0h20c2.76,0,5,2.24,5,5v20c0,2.76-2.24,5-5,5H5c-2.76,0-5-2.24-5-5V5C0,2.24,2.24,0,5,0Z"/>
+      </g>
+      <path id="Rectangle_728" data-name="Rectangle 728" class="cls-7" d="M17.5,5.97h0c.28,0,.5.22.5.5h0c0,.28-.22.5-.5.5h0c-.28,0-.5-.22-.5-.5h0c0-.28.22-.5.5-.5Z"/>
+      <rect id="Rectangle_727-2" data-name="Rectangle 727-2" class="cls-5" x="2" y="4.97" width="23" height="14" rx="2" ry="2"/>
+      <g id="Group_212" data-name="Group 212" class="cls-1">
+        <circle id="Ellipse_2" data-name="Ellipse 2" class="cls-8" cx="20.26" cy="6.47" r=".25"/>
+        <circle id="Ellipse_3" data-name="Ellipse 3" class="cls-8" cx="19.39" cy="6.47" r=".25"/>
+        <circle id="Ellipse_4" data-name="Ellipse 4" class="cls-8" cx="21.13" cy="6.47" r=".25"/>
+      </g>
+      <path id="Subtraction_47" data-name="Subtraction 47" class="cls-7" d="M22.97,19.03h0c1.11-.67,1.8-1.87,1.8-3.17v-7.92c0-1.17-.56-2.27-1.5-2.97,1.4.29,2.1,1.29,2.1,2.97v7.92c0,1.85-.83,2.94-2.4,3.17Z"/>
+      <rect id="Rectangle_730" data-name="Rectangle 730" class="cls-3" x="3" y="7.97" width="23" height="14" rx="2" ry="2"/>
+      <path id="Subtraction_48" data-name="Subtraction 48" class="cls-2" d="M24,22.03h0c1.11-.67,1.8-1.87,1.8-3.17v-7.92c0-1.17-.56-2.27-1.5-2.97,1.4.29,2.1,1.29,2.1,2.97v7.92c0,1.85-.83,2.94-2.4,3.17Z"/>
+      <g id="Group_213" data-name="Group 213" class="cls-1">
+        <circle id="Ellipse_2-2" data-name="Ellipse 2-2" class="cls-4" cx="22.26" cy="9.47" r=".25"/>
+        <circle id="Ellipse_3-2" data-name="Ellipse 3-2" class="cls-4" cx="21.39" cy="9.47" r=".25"/>
+        <circle id="Ellipse_4-2" data-name="Ellipse 4-2" class="cls-4" cx="23.13" cy="9.47" r=".25"/>
+      </g>
+      <g id="Group_214" data-name="Group 214" class="cls-1">
+        <circle id="Ellipse_2-3" data-name="Ellipse 2-3" class="cls-4" cx="23.26" cy="12.47" r=".25"/>
+        <circle id="Ellipse_3-3" data-name="Ellipse 3-3" class="cls-4" cx="22.39" cy="12.47" r=".25"/>
+        <circle id="Ellipse_4-3" data-name="Ellipse 4-3" class="cls-4" cx="24.13" cy="12.47" r=".25"/>
+      </g>
+      <rect id="Rectangle_732-2" data-name="Rectangle 732-2" class="cls-5" x="5" y="10.97" width="23" height="14" rx="2" ry="2"/>
+      <g id="Group_215" data-name="Group 215" class="cls-1">
+        <circle id="Ellipse_2-4" data-name="Ellipse 2-4" class="cls-8" cx="24.26" cy="12.47" r=".25"/>
+        <circle id="Ellipse_3-4" data-name="Ellipse 3-4" class="cls-8" cx="23.39" cy="12.47" r=".25"/>
+        <circle id="Ellipse_4-4" data-name="Ellipse 4-4" class="cls-8" cx="25.13" cy="12.47" r=".25"/>
+      </g>
+      <path id="Subtraction_49" data-name="Subtraction 49" class="cls-6" d="M25.97,25.03h0c1.11-.67,1.8-1.87,1.8-3.17v-7.92c0-1.17-.56-2.27-1.5-2.97,1.4.29,2.1,1.29,2.1,2.97v7.92c0,1.85-.83,2.94-2.4,3.17Z"/>
+      <path id="Rectangle_734" data-name="Rectangle 734" class="cls-9" d="M19.5,8.97h0c.28,0,.5.22.5.5h0c0,.28-.22.5-.5.5h0c-.28,0-.5-.22-.5-.5h0c0-.28.22-.5.5-.5Z"/>
+      <path id="Rectangle_735" data-name="Rectangle 735" class="cls-6" d="M21.5,11.97h0c.28,0,.5.22.5.5h0c0,.28-.22.5-.5.5h0c-.28,0-.5-.22-.5-.5h0c0-.28.22-.5.5-.5Z"/>
+      <path id="Rectangle_737" data-name="Rectangle 737" class="cls-7" d="M17.5,5.97h0c.28,0,.5.22.5.5h0c0,.28-.22.5-.5.5h0c-.28,0-.5-.22-.5-.5h0c0-.28.22-.5.5-.5Z"/>
+    </g>
+  </g>
+</svg>

@@ -81,3 +81,46 @@ html {
   overflow: hidden;
   transition: left 0.4s;
 }
+
+/* Grundlegende Stile für die Tasten */
+.button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  border-radius: 3px;
+  box-shadow: 0 2px #999;
+  cursor: pointer;
+  user-select: none;
+  /* Animation */
+  transition: all 0.3s;
+}
+
+/* Hover Effekt */
+.button:hover {
+  background-color: #ddd;
+}
+
+/* Stil für das Drücken der Taste */
+.button:active {
+  transform: scale(0.95);
+  box-shadow: 0 1px #666;
+}
+
+/* Animation für das automatische Drücken */
+@keyframes pressButton {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 2px #999;
+  }
+  50% {
+    transform: scale(0.95);
+    box-shadow: 0 1px #666;
+  }
+}
+
+/* Anwenden der Animation auf die Tasten */
+.animate-press {
+  animation: pressButton 1s ease infinite;
+}

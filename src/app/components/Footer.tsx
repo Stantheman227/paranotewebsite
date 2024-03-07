@@ -1,0 +1,28 @@
+import Link from "next/link";
+
+const Footer = () => {
+  return (
+    <footer className="w-full py-4 bg-gray-100">
+      <div className="max-w-screen-xl mx-auto px-4 flex justify-between items-center">
+        <div className="flex space-x-4 text-sm text-gray-600">
+          <Link href="/" className="hover:underline">
+            Home
+          </Link>
+          <Link href="/Impressum" className="hover:underline">
+            {" "}
+            Impressum{" "}
+          </Link>
+          <Link href="/Datenschutz" className="hover:underline">
+            Datenschutzerkärung
+          </Link>
+          <Link href="/FAQ" className="hover:underline">
+            FAQ
+          </Link>
+        </div>
+        <div className="text-sm text-gray-600">© 2022-2024 Paranote, Inc.</div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

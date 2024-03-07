@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Cubic";
+  src: url("/fonts/Cubic.ttf") format("truetype");
+  /* Pfade und Dateinamen entsprechend anpassen */
+}
+
+html {
+  background-color: "gray";
+  overflow-x: hidden;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #D3CCE3 0%, #E9E4F0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-back {
+  background: linear-gradient(to bottom, white, #6e6af6);
+}
+
+.nicefont {
+  background-image: url("https://cdn.pixabay.com/photo/2013/04/13/23/56/cambridge-103478_1280.jpg");
+  background-size: cover;
+  background-clip: text;
+  font: 200px "Cubic";
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@font-face {
+  font-family: "SF-Compact";
+  src: url("/fonts/Sf-Compact.ttf") format("truetype");
+  /* Pfade und Dateinamen entsprechend anpassen */
+}
+
+/* Verbergen der Scrollleiste */
+.noScrollBarContainer::-webkit-scrollbar {
+  width: 0.25rem; /* Breite auf 0 setzen */
+}
+
+/* Verbergen des Scrollleisten-Daumen (Griff) */
+.noScrollBarContainer::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+/* Verbergen des Scrollleisten-Tracks (Schienen) */
+.noScrollBarContainer::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+@keyframes highlightTextRightToLeft {
+  from {
+    background-size: 0% 100%;
+    background-position: 100% 0;
+  }
+  to {
+    background-size: 100% 100%;
+    background-position: 100% 0;
+  }
+}
+
+.highlight-right-to-left {
+  background-image: linear-gradient(to right, rgb(1, 78, 150) 100%, rgb(1, 78, 150) 0%, transparent 100%);
+  background-repeat: no-repeat;
+  animation: highlightTextRightToLeft 1s forwards;
+  color: white; /* Textfarbe */
+}
+
+
+/* styles.css */
+.baseButton {
+  display: flex;
+
+  height: 1rem; /* Beispielhöhe */
+  padding: 2rem;
+  background-color: #f3f3f3;
+  border: 2px solid #ccc;
+  border-radius: 0.5rem;
+  font-family: "Helvetica", "Arial", sans-serif;
+  pointer-events: all;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 300ms ease-out;
+}
+
+.cmdButton {
+  width: 6rem; /* Statt 16rem; */
+}
+
+.xButton {
+  width: 1rem; /* Statt 12rem; */
+}
+
+.animateScale {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.svgWrapRefContainer{
+  transform-origin: center;
+}
+
+.border-transform-svg {
+  border-right: 1px solid transparent;
+  backface-visibility: hidden;
+}
+
+.info-section {
+  background: rgb(110,106,246);
+  background: linear-gradient(45deg, rgba(110,106,246,1) 33%, rgba(199,148,233,1) 66%);
+}
+
+/* Abgerundet und Farbenfroh */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, rgba(110,106,246,1), rgba(199,148,233,1));
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #ff57a6, #ffd156);
+}
+
+/* Anpassung der Scrollbar für Firefox */
+body {
+  scrollbar-width: auto; /* "auto" oder "thin" - hier als auto für breitere Scrollbar */
+  scrollbar-color: linear-gradient(45deg, rgba(110,106,246,1), rgba(199,148,233,1)) transparent; /* Griff- und Track-Farbe, transparenter Track */
+}

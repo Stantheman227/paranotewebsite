@@ -136,7 +136,7 @@ const CommandX = ({
   return (
     <div
       ref={sectionRef}
-      className="absolute flex items-center justify-center h-full w-full overflow-x-hidden"
+      className="absolute flex items-center justify-center h-full w-full overflow-hidden"
     >
       {" "}
       <div className="w-full h-full flex flex-col text-center justify-center">

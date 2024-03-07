@@ -291,11 +291,11 @@ const ScrollScreen = ({
         start: "top bottom",
         end: "top center",
         scrub: true,
+        once: true,
       },
     });
-    tl.fromTo(
+    tl.to(
       scrollingScreenRef.current,
-      { backgroundColor: "transparent" },
       { backgroundColor: "black", duration: 2, ease: "none" },
       "<"
     );

@@ -29,7 +29,7 @@ const ScalingLaptop = ({
     const breakpoints = {
       "(min-width: 1920px)": { scale: 2.4 }, // For 1920px and above
       "(min-width: 1440px) and (max-width: 1919px)": { scale: 2.2 }, // For screens between 1440px and 1919px
-      "(min-width: 1024px) and (max-width: 1439px)": { scale: 2.0 }, // For screens between 1024px and 1439px
+      "(min-width: 1024px) and (max-width: 1439px)": { scale: 1.8 }, // For screens between 1024px and 1439px
       "(min-width: 768px) and (max-width: 1023px)": { scale: 1.8 }, // For screens between 768px and 1023px
       "(max-width: 767px)": { scale: 1.6 }, // For screens below 768px
     };

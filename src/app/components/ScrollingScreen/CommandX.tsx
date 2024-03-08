@@ -140,7 +140,7 @@ const CommandX = ({
     >
       {" "}
       <div className="w-full h-full flex flex-col text-center justify-center">
-        <div className="flex flex-col space-y-1 2xl:ml-8 3xl:ml-10 4xl:ml-16 ">
+        <div className="flex flex-col space-y-1 2xl:ml-8 3xl:ml-10 4xl:ml-16 5xl:ml-28 ">
           {Sachverhalt812.map((text, index) => (
             <div
               className="text-white text-[21px] xl:text-[24px] 2xl:text-[28px] 3xl:text-[30px] 4xl:text-[34px] font-semibold text-start font-serif"
@@ -162,7 +162,10 @@ const CommandX = ({
           </div>
         </div>
       </div>
-      <div ref={popUpsToCarousselRef} className="absolute right-0">
+      <div
+        ref={popUpsToCarousselRef}
+        className="absolute -right-24 xl:-right-10 2xl:-right-10 3xl:-right-10 4xl:right-0"
+      >
         <PopUpsToCaroussel isVisibleSetter={isVisibleSetter} />
       </div>
     </div>

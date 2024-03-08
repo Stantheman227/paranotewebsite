@@ -162,7 +162,7 @@ const JuraScript = ({
   return (
     <div
       ref={sectionRef}
-      className="absolute inset-0 flex items-center justify-start w-full overflow-x-hidden"
+      className="absolute inset-0 flex items-center justify-start w-full overflow-hidden"
     >
       <div
         ref={svgWrapRef}
@@ -181,7 +181,7 @@ const JuraScript = ({
         </div>
       </div>
 
-      <div ref={popUpsRef} className="absolute right-0 ">
+      <div ref={popUpsRef} className="absolute -right-16 xl:right-0">
         <PopUps />
       </div>
     </div>

@@ -31,22 +31,14 @@ const PopUp = ({
   const [gesetztesBuchActive, setGesetztesBuchActive] = useState(false);
 
   const slidingDivClass = `relative text-white tracking-wide flex flex-col justify-start slidingContainer 
-  ${
-    isActive
-      ? "translate-x-[-20px] xl:translate-x-[-25px] 2xl:translate-x-[-25px] 3xl:translate-x-[-30px] 4xl:translate-x-[-35px]"
-      : "translate-x-0"
-  }
+  ${isActive ? "translate-x-[-35px]" : "translate-x-0"}
   transform duration-500 ease-in-out bg-gray-500 rounded-lg space-y-2 p-2 overflow-hidden 
   ${isActive ? "active" : ""} 
-  w-[450px] sm:w-[150px] md:w-[180px] lg:w-[240px] xl:w-[338px] 2xl:w-[360px] 3xl:w-[375px] 4xl:w-[450px]
-  h-[150px] sm:h-[50px] md:h-[60px] lg:h-[80px] xl:h-[113px] 2xl:h-[120px] 3xl:h-[125px] 4xl:h-[150px]
-  ${
-    isActive
-      ? "h-[310px] sm:h-[103px] md:h-[124px] lg:h-[165px] xl:h-[233px] 2xl:h-[248px] 3xl:h-[258px] 4xl:h-[310px]"
-      : ""
-  }`;
+  w-[450px]
+  h-[150px]
+  ${isActive ? "h-[310px]" : ""}`;
 
-  const scrollDivClass = `scrollContainer noScrollBarContainer text-[8px] xl:text-[12px] 2xl:text-[13px] 3xl:text-[14px] 4xl:text-[16px] ${
+  const scrollDivClass = `scrollContainer noScrollBarContainer text-[16px] ${
     isActive ? "overflow-y-scroll" : "overflow-y-hidden"
   }`;
 
@@ -129,25 +121,23 @@ const PopUp = ({
       className="parentSliding rounded-lg relative font-SF-Compact"
     >
       <div className="flex flex-col space-y-1 absolute top-0 right-0">
-        <div className="w-[10px] h-[10px] lg:w-[16px] lg:h-[16px] xl:w-[24px] xl:h-[24px] 3xl:w-[28px] 3xl:h-[28px] 4xl:w-[30px] 4xl:h-[30px]">
+        <div className="w-[30px] h-[30px]">
           <Image src="/AddNote.svg" alt="arrow" width={30} height={30} />
         </div>
-        <div className="w-[10px] h-[10px] lg:w-[16px] lg:h-[16px] xl:w-[24px] xl:h-[24px] 3xl:w-[28px] 3xl:h-[28px] 4xl:w-[30px] 4xl:h-[30px]">
+        <div className="w-[30px] h-[30px]">
           <Image src="/TextMarker.svg" alt="arrow" width={30} height={30} />
         </div>
-        <div className="w-[10px] h-[10px] lg:w-[16px] lg:h-[16px] xl:w-[24px] xl:h-[24px] 3xl:w-[28px] 3xl:h-[28px] 4xl:w-[30px] 4xl:h-[30px]">
+        <div className="w-[30px] h-[30px]">
           <Image src="/ShowNote.svg" alt="arrow" width={30} height={30} />
         </div>
-        <div className="w-[10px] h-[10px] lg:w-[16px] lg:h-[16px] xl:w-[24px] xl:h-[24px] 3xl:w-[28px] 3xl:h-[28px] 4xl:w-[30px] 4xl:h-[30px]">
+        <div className="w-[30px] h-[30px]">
           <Image src="/CloseNote.svg" alt="arrow" width={30} height={30} />
         </div>
       </div>
 
       <div className={slidingDivClass}>
         <div className="top-0 sticky flex flex-row justify-between">
-          <p className="font-bold text-[6px] xl:text-[10px] 3xl:text-[12px] 4xl:text-[14px]">
-            {paragraph.Header}
-          </p>
+          <p className="font-bold text-[14px]">{paragraph.Header}</p>
           <div ref={svgRef} className="w-4 h-4">
             <CustomSvg color={gesetztesBuchActive ? "blue" : "white"} />
           </div>

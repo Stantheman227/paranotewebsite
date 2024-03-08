@@ -340,9 +340,10 @@ const Trinity = ({
   return (
     <div
       ref={sectionRef}
-      className="absolute w-full h-full flex flex-col items-center justify-center bg-black"
+      className="absolute w-full h-full flex flex-col items-center justify-center"
     >
-      <div className=" flex flex-row justify-around space-x-5 text-white w-full pointer-events-auto">
+      {/* NAVIGATION SECTION */}
+      <div className="absolute flex flex-row justify-around space-x-5 text-white w-full pointer-events-auto top-36 xl:top-24 2xl:top-20 3xl:top-10 4xl:top-4">
         {sections.map((item, index) => (
           <button
             key={index}
@@ -358,7 +359,7 @@ const Trinity = ({
       {/* CONTENT SECTION */}
       {activeIndex !== null && (
         <div
-          className={` h-full w-full flex ${
+          className={`w-full h-full flex flex-row${
             sections[activeIndex].layout === "textLeft"
               ? "flex-row-reverse"
               : ""

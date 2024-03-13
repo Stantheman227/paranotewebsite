@@ -158,12 +158,13 @@ body {
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  scroll-snap-stop: always;
 }
 
 .scroll-section {
   height: 100vh;
   scroll-snap-align: start;
   box-sizing: border-box;
+  scroll-snap-stop: always;
+
   
 }

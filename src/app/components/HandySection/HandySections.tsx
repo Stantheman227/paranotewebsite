@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 
 function HandySection() {
   const [activeSection, setActiveSection] = useState(0);
-  const sectionsRef = useRef([]);
   const touchStartY = useRef(0);
   const touchEndY = useRef(0);
 
@@ -25,7 +24,9 @@ function HandySection() {
     },
   ];
 
-  const scrollToSection = (sectionIndex) => {
+  const sectionsRef = useRef<(HTMLDivElement | null)[]>([]);
+
+  const scrollToSection = (sectionIndex: number) => {
     setActiveSection(sectionIndex);
     sectionsRef.current[sectionIndex]?.scrollIntoView({
       behavior: "smooth",
@@ -33,11 +34,11 @@ function HandySection() {
     });
   };
 
-  const handleTouchStart = (e) => {
+  const handleTouchStart = (e: TouchEvent) => {
     touchStartY.current = e.touches[0].clientY;
   };
 
-  const handleTouchEnd = (e) => {
+  const handleTouchEnd = (e: TouchEvent) => {
     touchEndY.current = e.changedTouches[0].clientY;
     if (touchStartY.current > touchEndY.current + 5) {
       // Swiped Up
@@ -53,8 +54,8 @@ function HandySection() {
   return (
     <div
       className="h-full w-full overflow-hidden"
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
+      onTouchStart={(e: any) => handleTouchStart(e)}
+      onTouchEnd={(e: any) => handleTouchEnd(e)}
     >
       {content.map((section, index) => (
         <div

@@ -13,8 +13,21 @@ html {
   overflow-x: hidden;
 }
 
+.scrollingScreenMain{
+  background-image: url("/wallpaper.png");
+  background-blend-mode: overlay;
+  background-size: cover;
+}
+
 .gradient-text {
   background: linear-gradient(90deg, #D3CCE3 0%, #E9E4F0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-text-purple {
+  background: linear-gradient(45deg, rgba(110,106,246,1) 33%, rgba(199,148,233,1) 66%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -137,4 +150,36 @@ body::-webkit-scrollbar-thumb:hover {
 body {
   scrollbar-width: auto; /* "auto" oder "thin" - hier als auto für breitere Scrollbar */
   scrollbar-color: linear-gradient(45deg, rgba(110,106,246,1), rgba(199,148,233,1)) transparent; /* Griff- und Track-Farbe, transparenter Track */
+}
+
+/*                 HANDY SECTION                      */ 
+
+@keyframes slideUpFromBottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutToTop {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.slide-up-from-bottom {
+  animation: slideUpFromBottom 1.0s ease-out forwards;
+}
+
+.slide-out-to-top {
+  animation: slideOutToTop 0.5s ease-out forwards;
 }

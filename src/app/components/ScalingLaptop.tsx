@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import ParanoteTypewriter from "./ParanoteTypewriter";
 
 const ScalingLaptop = ({
   firstSectionRef,
@@ -39,35 +38,28 @@ const ScalingLaptop = ({
       mm.add(mediaQuery, () => {
         const tl = gsap.timeline({
           scrollTrigger: {
-            trigger: typewriterRef.current,
-            endTrigger: secondSectionRef.current,
+            trigger: laptopWrapRef.current,
+            endTrigger: firstSectionRef.current,
             start: "center center",
             end: "top top",
             scrub: true,
           },
         });
 
+        // First animation
         tl.fromTo(
           laptopWrapRef.current,
-          { scale: scale },
-          { scale: 1, duration: 2, ease: "none" }
-        )
-          .to(
-            laptopWrapRef.current,
-            { scale: scale, duration: 2, ease: "none" },
-            "+=2.5"
-          )
-          .fromTo(
-            typewriterRef.current,
-            { autoAlpha: 1 },
-            { autoAlpha: 0, duration: 1, ease: "none" },
-            "-=1.5"
-          )
-          .fromTo(
-            sectionRef.current,
-            { autoAlpha: 1 },
-            { autoAlpha: 0, duration: 1, ease: "none" }
-          );
+          { scale: 1 },
+          { scale: scale, duration: 3, ease: "none" }
+        );
+
+        // Second animation, starts 2 seconds after the first one, so they end together
+        tl.fromTo(
+          sectionRef.current,
+          { autoAlpha: 1 },
+          { autoAlpha: 0, duration: 1, ease: "none" },
+          "-=1" // Starts 2 seconds before the first animation ends, i.e., 1 second after it starts
+        );
       });
     });
 
@@ -88,15 +80,10 @@ const ScalingLaptop = ({
         className="relative h-[75%] w-[50%] flex items-center justify-center"
       >
         <div className="absolute h-[756px] w-[1260px] items-center justify-center flex pointer-events-none">
-          <Image src="/laptop_trans.png" alt="laptop" fill={true} />
-        </div>
-        <div ref={typewriterRef} className="">
-          {" "}
-          <ParanoteTypewriter
-            infoSection={infoSection}
-            firstSectionRef={firstSectionRef}
-            thirdSectionRef={thirdSectionRef}
-            isBackgroundBlack={isBackgroundBlack}
+          <Image
+            src="/paranote_landingpage_laptop.png"
+            alt="laptop"
+            fill={true}
           />
         </div>
       </div>

@@ -48,6 +48,7 @@ const ScrollScreen = ({
 
   //////////////////////////// SCROLLING SCREEN REF /////////////////
   const scrollingScreenRef = useRef(null);
+  const backgroundColorScreenRef = useRef(null);
   //////////////////////////// TEXT REFS ////////////////////////////
 
   const textRefsWrap = useRef<HTMLDivElement>(null);
@@ -61,7 +62,7 @@ const ScrollScreen = ({
     gsap.registerPlugin(ScrollTrigger);
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: secondSectionRef.current,
+        trigger: firstSectionRef.current,
         start: "top 50%",
         end: "top top",
         scrub: true,
@@ -291,12 +292,15 @@ const ScrollScreen = ({
         start: "top bottom",
         end: "top center",
         scrub: true,
-        once: true,
       },
     });
     tl.to(
-      scrollingScreenRef.current,
-      { backgroundColor: "black", duration: 2, ease: "none" },
+      backgroundColorScreenRef.current,
+      {
+        backgroundColor: "black",
+        duration: 3,
+        ease: "none",
+      },
       "<"
     );
   });
@@ -304,11 +308,15 @@ const ScrollScreen = ({
   return (
     <div
       ref={scrollingScreenRef}
-      className="sticky top-0 w-full h-screen p-8 xl:p-12 2xl:p-16"
+      className="sticky top-0 w-full h-screen p-8 xl:p-12 2xl:p-16 scrollingScreenMain"
     >
+      <div
+        ref={backgroundColorScreenRef}
+        className="absolute inset-0 h-full w-full opacity-85"
+      />
       <div className="h-full w-full flex flex-row">
         {/* //////////////// TEXT REFS WRAP //////////////// */}
-        <div className="h-full w-full flex-[40%] p-5">
+        <div className="h-full w-full flex-[40%] p-10">
           <div className="relative h-full w-full space-y-10 flex flex-col item-center justify-center ">
             <div className="flex flex-row pointer-events-auto ">
               <button

@@ -50,11 +50,11 @@ export default function ParanoteInfoSection() {
   return (
     <div className="info-section h-full w-full">
       <div className=" h-full w-full px-8 flex flex-col justify-center items-center space-y-20">
-        <div className="mt-12 grid grid-cols-5 gap-10 justify-items-center">
+        <div className="mt-12 grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-10 justify-items-center">
           {boxData.map((box) => (
             <div
               key={box.id}
-              className="bg-white text-center shadow-lg rounded-xl flex flex-col h-[180px] w-[180px] 2xl:h-[200px] 2xl:w-[200px] xl:h-[180px] xl:w-[180px] lg:h-[160px] lg:w-[160px] md:h-[140px] md:w-[140px] sm:h-[120px] sm:w-[120px]"
+              className="bg-white text-center shadow-lg rounded-xl flex flex-col 2xl:h-[200px] 2xl:w-[200px] xl:h-[180px] xl:w-[180px] h-[180px] w-[180px]"
             >
               <div className="flex flex-1 justify-center items-end p-2">
                 <div className="text-[#6e6af6] 4xl:w-16 4xl:h-16 3xl:h-16 3xl:w-16 2xl:h-16 2xl:w-16 xl:h-12 xl:w-12 h-12 w-12">
@@ -81,6 +81,20 @@ export default function ParanoteInfoSection() {
             <p className="mt-4 text-xl text-white text-center">
               Deinem Assistenten für juristische Exzellenz. Entdecke, wie
               Paranote Dein Studium effizienter und produktiver macht.
+            </p>
+            <p className="mt-4 text-xl text-white text-center">
+              Paranote ist nicht nur ein digitales Gesetzbuch, Paranote ist dein
+              Begleiter während den Vorlesungen und im Selbststudium. Paranote
+              sucht automatisch für dich Gesetzestexte zu den Paragrafen, die du
+              gerade bearbeitest heraus.
+            </p>
+            <p className="mt-4 text-xl text-white text-center">
+              Ab jetzt brauchst du nicht mehr in deinen Gesetzesbüchern wühlen
+              und blättern, das übernimmt Paranote jetzt für dich. Parallel zum
+              scrollen durch deine Dokumente oder Websites, zeigt Paranote dir
+              den Gesetztestext zu allen Verweisen an auf die du bei der
+              Recherche triffst. Mit nur einem Klick kannst du direkt an die
+              richtige Stelle im jeweiligen Gesetzbuch springen.
             </p>
           </div>
           <button className="mt-4 text-sm bg-transparent hover:bg-[#6e6af6] text-white font-semibold hover:text-white py-2 px-4 border border-white hover:border-transparent rounded">

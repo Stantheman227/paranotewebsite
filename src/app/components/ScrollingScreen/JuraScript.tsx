@@ -168,7 +168,7 @@ const JuraScript = ({
         ref={svgWrapRef}
         className="flex items-center justify-center overflow-hidden svgWrapRefContainer rounded-sm border-transform-svg"
       >
-        <div className="overflow-visible ">
+        <div className="overflow-visible">
           <Image
             ref={svgRef1 as React.RefObject<HTMLImageElement>}
             src={"/Paranote_PDF_SVG.svg"}

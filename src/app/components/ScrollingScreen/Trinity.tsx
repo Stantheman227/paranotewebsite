@@ -140,13 +140,13 @@ const Trinity = ({
   const renderSecondImage = () => (
     <div
       className={
-        "h-[250px] w-[320px] xl:h-[250px] xl:w-[350px] 2xl:h-[320px] 2xl:w-[400px] 3xl:h-[350px] 3xl:w-[450px] 4xl:h-[420px] 4xl:w-[550px]"
+        "h-[250px] w-[320px] xl:h-[250px] xl:w-[350px] 2xl:h-[320px] 2xl:w-[400px] 3xl:h-[350px] 3xl:w-[450px] 4xl:h-[420px] 4xl:w-[550px] flex items-start justify-start"
       }
     >
       <Image
         src={"/ParaScout_Box.png"}
         alt="Bild für ParaScout"
-        height={700}
+        height={600}
         width={938}
         priority={true}
       />
@@ -156,7 +156,7 @@ const Trinity = ({
   const renderThirdImage = () => (
     <div
       className={
-        "h-[250px] w-[270px] xl:h-[250px] xl:w-[350px] 2xl:h-[320px] 2xl:w-[400px] 3xl:h-[350px] 3xl:w-[450px] 4xl:h-[400px] 4xl:w-[500px] space-y-2 flex flex-col items-center justify-center"
+        "h-[250px] w-[270px] xl:h-[250px] xl:w-[350px] 2xl:h-[320px] 2xl:w-[400px] 3xl:h-[350px] 3xl:w-[450px] 4xl:h-[400px] 4xl:w-[500px] space-y-2 flex flex-col items-center justify-start"
       }
     >
       <Image
@@ -296,7 +296,7 @@ const Trinity = ({
     } else {
       return (
         <>
-          <div className="flex mt-12">
+          <div className="flex">
             <div className="flex flex-col items-end space-y-1">
               <h1 className="font-semibold text-[17px] xl:text-[22px] 2xl:text-[26px] 3xl:text-[28px] 4xl:text-[30px]">
                 {text.text1}
@@ -340,10 +340,10 @@ const Trinity = ({
   return (
     <div
       ref={sectionRef}
-      className="absolute w-full h-full flex flex-col justify-start space-y-3"
+      className="absolute w-full h-full flex flex-col justify-start items-center space-y-44 2xl:space-y-20 "
     >
       {/* NAVIGATION SECTION */}
-      <div className="flex flex-row justify-around text-white w-full pointer-events-auto mt-20">
+      <div className="flex flex-row justify-center space-x-20 text-white w-full pointer-events-auto mt-20 ">
         {sections.map((item, index) => (
           <button
             key={index}
@@ -358,15 +358,9 @@ const Trinity = ({
       </div>
       {/* CONTENT SECTION */}
       {activeIndex !== null && (
-        <div
-          className={`w-full flex flex-row${
-            sections[activeIndex].layout === "textLeft"
-              ? "flex-row-reverse"
-              : ""
-          }`}
-        >
-          <div className="flex w-[50%] items-center justify-center">
-            <div className="p-5 space-y-1 text-white ">
+        <div className={`w-full flex flex-row`}>
+          <div className="flex w-[50%] items-start justify-start">
+            <div className="space-y-1 text-white ">
               {renderSectionContent(activeIndex, sections[activeIndex].text)}
             </div>
           </div>

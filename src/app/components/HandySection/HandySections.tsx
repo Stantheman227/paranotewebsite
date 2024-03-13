@@ -1,10 +1,6 @@
 import React, { useState, useRef } from "react";
 
 function HandySection() {
-  const [activeSection, setActiveSection] = useState(0);
-  const touchStartY = useRef(0);
-  const touchEndY = useRef(0);
-
   const content = [
     {
       title: "ParaScout erkennt Paragrafen in deiner PDF",
@@ -24,46 +20,16 @@ function HandySection() {
     },
   ];
 
-  const sectionsRef = useRef<(HTMLDivElement | null)[]>([]);
-
-  const scrollToSection = (sectionIndex: number) => {
-    setActiveSection(sectionIndex);
-    sectionsRef.current[sectionIndex]?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  };
-
-  const handleTouchStart = (e: TouchEvent) => {
-    touchStartY.current = e.touches[0].clientY;
-  };
-
-  const handleTouchEnd = (e: TouchEvent) => {
-    touchEndY.current = e.changedTouches[0].clientY;
-    if (touchStartY.current > touchEndY.current + 5) {
-      // Swiped Up
-      const nextSection = Math.min(activeSection + 1, content.length - 1);
-      scrollToSection(nextSection);
-    } else if (touchStartY.current < touchEndY.current - 5) {
-      // Swiped Down
-      const prevSection = Math.max(activeSection - 1, 0);
-      scrollToSection(prevSection);
-    }
-  };
-
   return (
-    <div
-      className="h-full w-full overflow-hidden"
-      onTouchStart={(e: any) => handleTouchStart(e)}
-      onTouchEnd={(e: any) => handleTouchEnd(e)}
-    >
+    <div className="scroll-container">
       {content.map((section, index) => (
         <div
           key={index}
-          ref={(el) => (sectionsRef.current[index] = el)}
-          className="w-full h-screen flex flex-col justify-center items-center bg-gray-100 border-b"
+          className="scroll-section p-5 flex flex-col items-start justify-start"
         >
-          <h2 className="text-xl font-bold mb-4">{section.title}</h2>
+          <h2 className="text-3xl text-center font-bold tracking-tighter">
+            {section.title}
+          </h2>
           <p>{section.text}</p>
         </div>
       ))}

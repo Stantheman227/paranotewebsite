@@ -51,22 +51,20 @@ export default function Home() {
   const windowWidth = useWindowWidth();
 
   useLayoutEffect(() => {
-    let locomotiveScroll: any;
-    const screenHeight = window.innerHeight;
-    const sectionHeightOnRender = screenHeight * 8;
-    setSectionHeight(sectionHeightOnRender);
-
-    import("locomotive-scroll").then((LocomotiveScroll) => {
-      locomotiveScroll = new LocomotiveScroll.default({
-        el: scrollRef.current ?? undefined,
-        smooth: true,
+    let locomotiveScroll: any = null;
+    if (windowWidth ?? 0 > 768) {
+      import("locomotive-scroll").then((LocomotiveScroll) => {
+        locomotiveScroll = new LocomotiveScroll.default({
+          el: scrollRef.current ?? undefined,
+          smooth: true,
+        });
       });
-    });
+    }
 
     return () => {
       if (locomotiveScroll) locomotiveScroll.destroy();
     };
-  }, []);
+  }, [windowWidth]);
 
   return (
     <main ref={scrollRef} className="h-full w-full bg-gray-200">

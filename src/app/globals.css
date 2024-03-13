@@ -154,32 +154,14 @@ body {
 
 /*                 HANDY SECTION                      */ 
 
-@keyframes slideUpFromBottom {
-  from {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.scroll-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 
-@keyframes slideOutToTop {
-  from {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-}
-
-.slide-up-from-bottom {
-  animation: slideUpFromBottom 1.0s ease-out forwards;
-}
-
-.slide-out-to-top {
-  animation: slideOutToTop 0.5s ease-out forwards;
+.scroll-section {
+  height: 100vh;
+  scroll-snap-align: start;
+  box-sizing: border-box;
 }

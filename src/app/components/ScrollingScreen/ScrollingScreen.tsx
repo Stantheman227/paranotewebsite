@@ -308,13 +308,13 @@ const ScrollScreen = ({
   return (
     <div
       ref={scrollingScreenRef}
-      className="sticky top-0 w-full h-screen p-8 xl:p-12 2xl:p-16 scrollingScreenMain"
+      className="sticky top-0 w-full h-screen p-8 xl:p-12 2xl:p-16 scrollingScreenMain "
     >
       <div
         ref={backgroundColorScreenRef}
-        className="absolute inset-0 h-full w-full opacity-85"
+        className="absolute inset-0 h-full w-full opacity-85 "
       />
-      <div className="h-full w-full flex flex-row">
+      <div className="h-full w-full flex flex-row ">
         {/* //////////////// TEXT REFS WRAP //////////////// */}
         <div className="h-full w-full flex-[40%] p-10">
           <div className="relative h-full w-full space-y-10 flex flex-col item-center justify-center ">
@@ -357,7 +357,7 @@ const ScrollScreen = ({
           </div>
         </div>
         {/* //////////////// CONTENT SCREEN //////////////// */}
-        <div className="relative h-full w-[80%] flex">
+        <div className="relative h-full w-[80%] flex items-center justify-center">
           <JuraScript
             firstSectionRef={firstSectionRef}
             secondSectionRef={secondSectionRef}

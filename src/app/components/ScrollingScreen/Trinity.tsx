@@ -340,35 +340,37 @@ const Trinity = ({
   return (
     <div
       ref={sectionRef}
-      className="absolute w-full h-full flex flex-col justify-start items-center space-y-44 2xl:space-y-20 "
+      className="w-full h-full flex flex-col justify-center items-center "
     >
-      {/* NAVIGATION SECTION */}
-      <div className="flex flex-row justify-center space-x-20 text-white w-full pointer-events-auto mt-20 ">
-        {sections.map((item, index) => (
-          <button
-            key={index}
-            className={`text-[30px] xl:text-[35px] 2xl:text-[40px] 3xl:text-[45px] 4xl:text-[50px] font-bold ${
-              activeIndex === index ? "opacity-100" : "opacity-50"
-            }`}
-            onClick={() => toggleItem(index)}
-          >
-            {item.name}
-          </button>
-        ))}
-      </div>
-      {/* CONTENT SECTION */}
-      {activeIndex !== null && (
-        <div className={`w-full flex flex-row`}>
-          <div className="flex w-[50%] items-start justify-start">
-            <div className="space-y-1 text-white ">
-              {renderSectionContent(activeIndex, sections[activeIndex].text)}
+      <div className="h-[800px] w-full flex flex-col justify-start space-y-44 2xl:space-y-20 ">
+        {/* NAVIGATION SECTION */}
+        <div className="w-full flex flex-row justify-center items-start space-x-20 text-white pointer-events-auto">
+          {sections.map((item, index) => (
+            <button
+              key={index}
+              className={`text-[30px] xl:text-[35px] 2xl:text-[40px] 3xl:text-[45px] 4xl:text-[50px] font-bold ${
+                activeIndex === index ? "opacity-100" : "opacity-50"
+              }`}
+              onClick={() => toggleItem(index)}
+            >
+              {item.name}
+            </button>
+          ))}
+        </div>
+        {/* CONTENT SECTION */}
+        {activeIndex !== null && (
+          <div className={`w-full flex flex-row `}>
+            <div className="flex w-[50%] items-start justify-start ">
+              <div className="space-y-1 text-white ">
+                {renderSectionContent(activeIndex, sections[activeIndex].text)}
+              </div>
+            </div>
+            <div className="flex w-[50%] items-center justify-center text-white">
+              {renderImageForIndex(activeIndex)}
             </div>
           </div>
-          <div className="flex w-[50%] items-center justify-center text-white">
-            {renderImageForIndex(activeIndex)}
-          </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };

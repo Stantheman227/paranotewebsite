@@ -20,16 +20,17 @@ export default function Home() {
   const [sectionHeight, setSectionHeight] = React.useState(0);
 
   const scrollToTop = () => {
-    // Scrolls to the top of the window
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // For smooth scrolling
+      behavior: "smooth",
     });
   };
 
   function useWindowWidth() {
     // Initialize state with undefined so it is server-side rendering safe
-    const [windowWidth, setWindowWidth] = useState<number | undefined>(undefined);
+    const [windowWidth, setWindowWidth] = useState<number | undefined>(
+      undefined
+    );
 
     useEffect(() => {
       // Set window width on client-side
@@ -43,8 +44,7 @@ export default function Home() {
 
       // Cleanup the event listener on component unmount
       return () => window.removeEventListener("resize", handleResize);
-    }, []); // Empty array ensures this effect runs only once on mount
-
+    }, []);
     return windowWidth;
   }
 

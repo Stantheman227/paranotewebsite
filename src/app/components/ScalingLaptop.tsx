@@ -16,8 +16,6 @@ const ScalingLaptop = ({
 }) => {
   const sectionRef = useRef(null);
   const laptopWrapRef = useRef(null);
-  const typewriterRef = useRef(null);
-  const isBackgroundBlack = false;
 
   useEffect(() => {
     // USE EFFECT FOR LAPTOP SCALING
@@ -81,7 +79,7 @@ const ScalingLaptop = ({
       >
         <div className="absolute h-[756px] w-[1260px] items-center justify-center flex pointer-events-none">
           <Image
-            src="/paranote_landingpage_laptop.png"
+            src="/Paranote_Landingpage_Laptop.png"
             alt="laptop"
             fill={true}
           />

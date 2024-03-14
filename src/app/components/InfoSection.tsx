@@ -50,7 +50,7 @@ export default function ParanoteInfoSection() {
   return (
     <div className="info-section h-full w-full">
       <div className=" h-full w-full px-8 flex flex-col justify-center items-center space-y-20">
-        <div className="mt-12 grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-10 justify-items-center">
+        <div className="mt-12 grid grid-cols-1 xxs:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-10 justify-items-center">
           {boxData.map((box) => (
             <div
               key={box.id}

@@ -8,8 +8,8 @@ import PopUp from "../PopUp";
 
 function CommandXSection() {
   return (
-    <div className="scroll-section p-5 flex flex-col items-center bg-black text-white h-screen overflow-hidden">
-      <div className="h-full w-full flex flex-[20%] flex-col p-5">
+    <div className="scroll-section p-5 flex flex-col items-center text-white h-screen overflow-hidden">
+      <div className="h-full w-full flex flex-[20%] flex-col p-5 text-center">
         <h2 className="text-3xl font-bold tracking-tighter mb-4">
           Command + X für ParaScout in jedem Textfeld
         </h2>

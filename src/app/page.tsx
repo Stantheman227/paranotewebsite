@@ -71,7 +71,25 @@ export default function Home() {
       <div className="w-full h-full bg-gray-200">
         {/* Conditional rendering based on window width */}
         {windowWidth !== undefined && windowWidth <= 768 ? (
-          <HandySection />
+          <>
+            <Image
+              style={{
+                zIndex: 60,
+                objectFit: "contain",
+                position: "fixed",
+                cursor: "pointer",
+                top: 8,
+                left: 8,
+              }}
+              onClick={scrollToTop}
+              src={"/logo_dm.svg"}
+              height={50}
+              width={100}
+              alt="Paranote_logo"
+            />
+
+            <HandySection />
+          </>
         ) : (
           <div className="relative h-full w-full ">
             <Image

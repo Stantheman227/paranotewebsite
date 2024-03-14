@@ -3,8 +3,8 @@ import Image from "next/image";
 
 function PopUpSection() {
   return (
-    <div className="scroll-section p-5 flex flex-col items-center bg-black text-white h-screen">
-      <div className="h-full w-full flex flex-[20%] flex-col p-5">
+    <div className="scroll-section p-5 flex flex-col items-center text-white h-screen">
+      <div className="h-full w-full text-center flex flex-[20%] flex-col p-5">
         <h2 className="text-3xl font-bold tracking-tighter mb-4">
           Gesetztestexte direkt als Pop-up{" "}
         </h2>

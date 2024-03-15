@@ -59,12 +59,14 @@ const PopUpsToCaroussel = ({
     <div className="h-[822px] flex items-center">
       <div
         ref={containerRef}
-        className="relative flex flex-col items-center space-y-1 scale-50 xl:scale-[65%] 2xl:scale-75 3xl:scale-75 4xl:scale-[85%] 5xl:scale-100"
+        className="relative w-full flex flex-col items-start space-y-1 scale-50 xl:scale-[65%] 2xl:scale-75 3xl:scale-75 4xl:scale-[85%] 5xl:scale-100"
+        style={{ transformOrigin: "left center" }} // Skalierung vom linken Rand aus
       >
         {ParagraphenForCaroussel.map((paragraph, index) => (
           <div
             key={index}
-            className={`flex justify-center ${
+            className={`flex justify-start ${
+              // Änderung von justify-center zu justify-start
               index !== 2 && !isVisible ? "hidden" : ""
             }`}
             style={{ zIndex: getZIndexForParagraph(index) }}

@@ -88,7 +88,7 @@ export default function Home() {
               alt="Paranote_logo"
             />
 
-            <HandySection />
+            <HandySection infoSection={infoSection} />
           </>
         ) : (
           <div className="relative h-full w-full ">

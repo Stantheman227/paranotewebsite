@@ -4,13 +4,13 @@ import Image from "next/image";
 function ScriptSection() {
   return (
     <div className="flex flex-col text-white">
-      <div className="h-full w-full flex flex-[20%] flex-col p-5 ">
-        <h2 className="text-3xl font-bold tracking-tighter mb-4">
+      <div className="h-full w-full flex flex-[20%] flex-col pl-5 pr-5 pb-5 ">
+        <h2 className="text-3xl font-bold tracking-tighter mb-5">
           ParaScout erkennt Paragrafen in deiner PDF
         </h2>
         <p>
-          ParaScout ist ein Algorithmus, der für dich die Paragrafen in deinem
-          Dokument findet.
+          ParaScout ist der Algorithmus, der für dich die Paragrafen in deinen
+          Dokumenten findet.
         </p>
       </div>
       <div className="h-full w-full p-5 flex flex-[80%] items-center justify-center">

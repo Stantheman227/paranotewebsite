@@ -5,7 +5,7 @@ function TrinitySection() {
   return (
     <div className="p-5 flex flex-col items-center text-white">
       <div className="h-full w-full flex flex-[20%] flex-col">
-        <h2 className="text-3xl font-bold tracking-tighter">
+        <h2 className="text-3xl font-bold tracking-tighter mb-5">
           Notiere Markiere und Kommentiere
         </h2>
         <p>blablabal</p>

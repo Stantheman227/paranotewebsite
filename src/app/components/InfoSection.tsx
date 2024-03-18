@@ -73,20 +73,35 @@ export default function ParanoteInfoSection() {
           ))}
         </div>
 
-        <div className="h-full w-full flex flex-col justify-between items-center bg-blue-400 p-2">
-          <div className="h-full w-full flex flex-col items-center space-y-5">
-            <div className="flex flex-col space-y-5 md:space-y-0 md:flex-row md:space-x-5 items-center justify-center">
-              <div className="h-[350px] w-full bg-purple-30 0 rounded-xl flex items-center justify-center bg-purple-300">
-                <div className="h-[200px] w-[200px] bg-black rounded-lg"></div>
-              </div>
-              <div className="h-[350px] w-full bg-purple-300 rounded-xl flex items-center justify-center">
-                {" "}
-                <div className="h-[200px] w-full p-5">
-                  <h2 className="font-medium text-[34px] tracking-tighter">
+        <div className="w-full flex flex-col justify-between items-center p-5 overflow-hidden">
+          <div className="h-full w-full flex flex-col items-center space-y-5 overflow-hidden ">
+            <div className="flex flex-col space-y-5 md:space-y-0 md:flex-row md:space-x-5 overflow-hidden ">
+              <div className="h-[400px] w-full bg-purple-30 0 rounded-xl flex items-center justify-center overflow-hidden">
+                <div className="rounded-xl">
+                  <div className="relative flex items-center justify-center h-full w-full rounded-lg overflow-hidden ">
                     {" "}
-                    Überschrift 2
+                    <Image
+                      src={"/students_table.jpg"}
+                      height={3487}
+                      width={5231}
+                      alt="students sitting at table"
+                      style={{
+                        objectFit: "fill",
+                        objectPosition: "",
+                        transformOrigin: "center",
+                      }}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="h-[350px] w-full rounded-xl flex ">
+                {" "}
+                <div className="h-full w-full p-5 text-white">
+                  <h2 className="font-semibold text-[4vh] mb-5">
+                    {" "}
+                    Überschrift 1
                   </h2>
-                  <p className="font-medium text-[24px] leading-7">
+                  <p className="font-medium text-[2vh] md:text-[4vh]">
                     Deinem Assistenten für juristische Exzellenz. Entdecke, wie
                     Paranote Dein Studium effizienter und produktiver macht.
                     Paranote ist nicht nur ein digitales Gesetzbuch, Paranote
@@ -98,12 +113,14 @@ export default function ParanoteInfoSection() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col space-y-5 space-x-0 md:space-y-0 md:flex-row md:space-x-5 items-center justify-center">
-              <div className="h-[350px] w-full bg-purple-300 rounded-xl flex items-center justify-center">
+            <div className="flex flex-col-reverse space-y-5 space-x-0 md:space-y-0 md:flex-row md:space-x-5 items-center justify-center">
+              <div className="h-[350px] w-full rounded-xl">
                 {" "}
-                <div className="h-[200px] w-full ">
-                  <h3></h3>
-                  <p>
+                <div className="h-full w-full p-5 text-white">
+                  <h3 className="font-semibold text-[4vh] mb-5">
+                    Überschrift 2
+                  </h3>
+                  <p className="font-medium text-[2vh] md:text-[4vh]">
                     Ab jetzt brauchst du nicht mehr in deinen Gesetzesbüchern
                     wühlen und blättern, das übernimmt Paranote jetzt für dich.
                     Parallel zum scrollen durch deine Dokumente oder Websites,
@@ -114,16 +131,31 @@ export default function ParanoteInfoSection() {
                   </p>
                 </div>
               </div>
-              <div className="h-[350px] w-full bg-purple-300 rounded-xl flex items-center justify-center">
+              <div className="h-[400px] w-full rounded-xl flex items-center justify-center overflow-hidden ">
                 {" "}
-                <div className="h-[200px] w-[200px] bg-black rounded-lg"></div>
+                <div className="rounded-lg">
+                  <div className="relative flex items-center justify-center h-full w-full rounded-lg overflow-hidden ">
+                    {" "}
+                    <Image
+                      src={"/students_table.jpg"}
+                      height={3487}
+                      width={5231}
+                      alt="students sitting at table"
+                      style={{
+                        objectFit: "contain",
+                        objectPosition: "",
+                        transformOrigin: "center",
+                      }}
+                    />
+                  </div>{" "}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="h-screen w-full flex items-center justify-center bg-orange-400">
+      <div className="h-screen w-full flex items-center justify-center">
         <Image
           src={"/apple_ecosystem.svg"}
           height={1000}

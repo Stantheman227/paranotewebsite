@@ -6,7 +6,7 @@ function CommandXSection() {
   return (
     <div className="p-5 flex flex-col items-center text-white overflow-hidden">
       <div className="h-full w-full flex flex-[20%] flex-col">
-        <h2 className="text-3xl font-bold tracking-tighter">
+        <h2 className="text-3xl font-bold tracking-tighter mb-5">
           Command + X für ParaScout in jedem Textfeld
         </h2>
         <p>

@@ -21,10 +21,10 @@ export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const navigation = [
-    { name: "Home", action: () => handleScrollTo("index-section") },
-    { name: "Features", action: () => handleScrollTo("features-section") },
-    { name: "Pricing", action: () => handleScrollTo("pricing-section") },
-    { name: "About", action: () => handleScrollTo("end-section") },
+    { name: "Home", action: () => console.log() },
+    { name: "Features", action: () => console.log() },
+    { name: "Pricing", action: () => console.log() },
+    { name: "About", action: () => console.log() },
   ];
 
   const scrollToTop = () => {
@@ -124,7 +124,9 @@ export default function Home() {
                 </div>
               )}
             </div>
-            <HandySection style={{ zIndex: 10 }} infoSection={infoSection} />
+            <div style={{ zIndex: 10 }}>
+              <HandySection infoSection={infoSection} />
+            </div>
           </>
         ) : (
           <div className="relative h-full w-full ">

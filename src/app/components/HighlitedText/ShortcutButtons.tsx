@@ -52,17 +52,17 @@ const ShortcutButtons = () => {
         } baseButton border-white border-2 w-full space-x-1 pointer-events-auto`}
         onClick={handleCmdClick}
       >
-        <span className="text-m">cmd</span>
-        <span className="text-m">⌘</span>
+        <span className="text-m text-black">cmd</span>
+        <span className="text-m text-black">⌘</span>
       </button>
 
-      <div className="h-full w-12 text-white flex flex-col item-center justify-center">
+      <div className="h-full w-12 p-5 text-white flex flex-col item-center justify-center">
         <p>+</p>
       </div>
       <button
         className={`xButton ${xPressed ? "pressed" : ""} ${
           xButtonAnimated ? "animateScale" : ""
-        } baseButton border-white border-2 w-full space-x-1 pointer-events-auto`}
+        } baseButton border-white border-2 w-full space-x-1 pointer-events-auto text-black`}
         onClick={handleXClick}
       >
         X

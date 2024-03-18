@@ -3,8 +3,8 @@ import Image from "next/image";
 
 function ScriptSection() {
   return (
-    <div className="scroll-section p-5 flex flex-col items-center text-white h-screen bg-black">
-      <div className="h-full w-full flex flex-[20%] flex-col p-5 text-center">
+    <div className="flex flex-col text-white">
+      <div className="h-full w-full flex flex-[20%] flex-col p-5 ">
         <h2 className="text-3xl font-bold tracking-tighter mb-4">
           ParaScout erkennt Paragrafen in deiner PDF
         </h2>
@@ -13,12 +13,13 @@ function ScriptSection() {
           Dokument findet.
         </p>
       </div>
-      <div className="h-full w-full flex flex-[80%] items-center justify-center">
-        <div className="relative max-w-full h-full w-[80%] mb-4 overflow-hidden">
+      <div className="h-full w-full p-5 flex flex-[80%] items-center justify-center">
+        <div className="flex items-center justify-center relative w-full overflow-hidden rounded-md">
           <Image
-            src="/Paranote_PDF_SVG.svg"
+            src="/JuraScriptMarkiert.png"
             alt="JuraScript mit Markierten Paragrafen"
-            fill={true}
+            height={500}
+            width={400}
             style={{ objectFit: "contain" }}
           />
         </div>

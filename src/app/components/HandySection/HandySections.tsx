@@ -21,21 +21,14 @@ export const HandySection: React.FC<HandySectionProps> = ({ infoSection }) => {
   };
 
   return (
-    <div className="scroll-container info-section">
-      <div className="scroll-section flex flex-col items-center justify-start overflow-hidden">
-        <div className="h-[35%] text-white text-center p-5 flex flex-col">
-          <h1 className="text-xl font-bold tracking-tighter mb-4">
-            App fürs Jurastudium: Dein Studienleben einfacher mit Paranote
+    <div className="info-section mt-[75px]">
+      <div className="flex flex-col">
+        <div className="h-[35%] w-full text-white p-5 flex">
+          <h1 className="w-full text-[40px] text-start font-bold mb-4">
+            Das smarte Gesetzbuch für dein Jurastudium.
           </h1>
-          <h2 className="text-[12px] font-semibold tracking-tighter mb-4 h-full flex items-center justify-center">
-            Hey Jurastudis! Wir wissen, wie knapp eure Zeit ist und wie wertvoll
-            jede Minute sein kann, besonders wenn Prüfungen anstehen oder die
-            nächste Hausarbeit fällig ist. Paranote ist hier, um euer
-            Studienleben ein bisschen einfacher zu machen. Diese App ist nicht
-            nur irgendeine Lernhilfe, sondern der Gamechanger für euer
-            Jurastudium.
-          </h2>
         </div>
+
         <div className="flex items-center justify-center max-h-[40%] w-full">
           <div className="relative h-[350px] w-[600px] flex items-center justify-center overflow-hidden">
             <Image

@@ -18,6 +18,14 @@ export default function Home() {
   const seventhSectionRef = useRef(null);
   const infoSection = useRef(null);
   const [sectionHeight, setSectionHeight] = React.useState(0);
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
+  const navigation = [
+    { name: "Home", action: () => handleScrollTo("index-section") },
+    { name: "Features", action: () => handleScrollTo("features-section") },
+    { name: "Pricing", action: () => handleScrollTo("pricing-section") },
+    { name: "About", action: () => handleScrollTo("end-section") },
+  ];
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -72,23 +80,51 @@ export default function Home() {
         {/* Conditional rendering based on window width */}
         {windowWidth !== undefined && windowWidth <= 768 ? (
           <>
-            <Image
-              style={{
-                zIndex: 60,
-                objectFit: "contain",
-                position: "fixed",
-                cursor: "pointer",
-                top: 8,
-                left: 8,
-              }}
-              onClick={scrollToTop}
-              src={"/logo_dm.svg"}
-              height={50}
-              width={100}
-              alt="Paranote_logo"
-            />
-
-            <HandySection infoSection={infoSection} />
+            <div
+              style={{ zIndex: 90 }}
+              className="flex items-center justify-between fixed inset-0 bg-gray-100 bg-opacity-75 w-full h-[75px] backdrop-blur-sm"
+            >
+              <Image
+                style={{
+                  zIndex: 60,
+                  objectFit: "contain",
+                  cursor: "pointer",
+                  marginLeft: 20,
+                }}
+                onClick={scrollToTop}
+                src={"/logo_lm.svg"}
+                height={70}
+                width={140}
+                alt="Paranote_logo"
+              />
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className={`hamburger hamburger--collapse hover:opacity-40 ${
+                  isMenuOpen ? "is-active" : ""
+                }`}
+              >
+                <div className="hamburger-box">
+                  <div className="hamburger-inner"></div>
+                </div>
+              </button>
+              {isMenuOpen && (
+                <div className="absolute right-5 top-full mt-2 w-48 py-2 flex flex-col items-center justify-center bg-white rounded-lg shadow-xl bg-opacity-75 backdrop-blur-md">
+                  {navigation.map((item) => (
+                    <div
+                      key={item.name}
+                      className="block px-4 py-2 text-black hover:bg-gray-200 cursor-pointer"
+                      onClick={() => {
+                        item.action();
+                        setIsMenuOpen(false);
+                      }}
+                    >
+                      {item.name}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+            <HandySection style={{ zIndex: 10 }} infoSection={infoSection} />
           </>
         ) : (
           <div className="relative h-full w-full ">

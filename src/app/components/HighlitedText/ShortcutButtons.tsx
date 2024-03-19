@@ -56,8 +56,8 @@ const ShortcutButtons = () => {
         <span className="text-m text-black">⌘</span>
       </button>
 
-      <div className="h-full w-12 p-5 text-white flex flex-col item-center justify-center">
-        <p>+</p>
+      <div className="h-full w-12 ml-6 text-white flex flex-col item-center justify-center">
+        <p className="text-[30px]">+</p>
       </div>
       <button
         className={`xButton ${xPressed ? "pressed" : ""} ${

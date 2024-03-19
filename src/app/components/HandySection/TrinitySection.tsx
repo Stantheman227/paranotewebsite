@@ -4,7 +4,7 @@ import Image from "next/image";
 function TrinitySection() {
   return (
     <div className="p-5 flex flex-col items-center text-white">
-      <div className="h-full w-full flex flex-[20%] flex-col">
+      <div className="h-full w-full flex flex-[20%] flex-colm mb-5">
         <h2 className="text-3xl font-bold tracking-tighter mb-5">
           Notiere, Markiere und Organisiere aus deiner Menubar App.
         </h2>
@@ -15,13 +15,14 @@ function TrinitySection() {
         </p>
       </div>
       <div className="h-full w-full flex items-start justify-center ">
-        <div className="h-[650px] w-[400px] relative rounded-xl">
+        <div className="h-full w-full relative rounded-xl">
           <Image
             src={"/Paranote_Homescreen.png"}
             alt="Bild für Notizen"
             priority={true}
-            layout="fill" // This makes the image fill the container
-            objectFit="cover" // Adjust the object-fit property here
+            width={982}
+            height={1492}
+            style={{ objectFit: "contain" }}
           />
         </div>
       </div>

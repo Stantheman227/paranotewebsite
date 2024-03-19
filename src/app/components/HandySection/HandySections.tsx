@@ -23,9 +23,10 @@ export const HandySection: React.FC<HandySectionProps> = ({ infoSection }) => {
   return (
     <div className="bg-black">
       <div className="flex flex-col h-screen">
-        <div className="h-[35%] w-full text-white p-5 flex mt-[75px]">
+        <div className="h-[35%] w-full text-white p-5 flex mt-[50px]">
           <h1 className="w-full text-[5vh] text-start font-bold mb-4">
-            Das smarte Gesetzbuch für dein Jurastudium.
+            Das <span className="gradient-text-purple">smarte</span> Gesetzbuch
+            für dein <span className="gradient-text-purple">Jurastudium</span>.
           </h1>
         </div>
 
@@ -55,6 +56,7 @@ export const HandySection: React.FC<HandySectionProps> = ({ infoSection }) => {
         </div>
       </div>
       <ScriptSection />
+      <div className="h-[1px] w-full bg-white" />
       <PopUpSection />
       <WebsitePluginSection />
       <CommandXSection />

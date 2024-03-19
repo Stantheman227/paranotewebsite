@@ -48,8 +48,8 @@ const boxData = [
 
 export default function ParanoteInfoSection() {
   return (
-    <div className="info-section h-full w-full p-5">
-      <div className=" h-full w-full flex flex-col justify-center items-center space-y-20">
+    <div className="info-section h-full w-full p-10">
+      <div className="h-full w-full flex flex-col justify-center items-center space-y-20">
         <div className="mt-12 grid grid-cols-1 xxs:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-10 justify-items-center">
           {boxData.map((box) => (
             <div

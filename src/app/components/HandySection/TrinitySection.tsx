@@ -15,7 +15,7 @@ function TrinitySection() {
         </p>
       </div>
       <div className="h-full w-full flex items-start justify-center ">
-        <div className="h-[590px] w-full relative">
+        <div className="h-[650px] w-[400px] relative rounded-xl">
           <Image
             src={"/Paranote_Homescreen.png"}
             alt="Bild für Notizen"

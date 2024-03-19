@@ -48,9 +48,9 @@ const boxData = [
 
 export default function ParanoteInfoSection() {
   return (
-    <div className="info-section h-full w-full p-10">
+    <div className="info-section h-full w-full p-5">
       <div className="h-full w-full flex flex-col justify-center items-center space-y-20">
-        <div className="mt-12 grid grid-cols-1 xxs:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-10 justify-items-center">
+        <div className="mt-12 grid grid-cols-1 min-[365px]:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-10 justify-items-center">
           {boxData.map((box) => (
             <div
               key={box.id}
@@ -73,82 +73,84 @@ export default function ParanoteInfoSection() {
           ))}
         </div>
 
-        <div className="w-full flex flex-col justify-between items-center p-5 overflow-hidden">
-          <div className="h-full w-full flex flex-col items-center space-y-5 overflow-hidden ">
-            <div className="flex flex-col space-y-5 md:space-y-0 md:flex-row md:space-x-5 overflow-hidden ">
-              <div className="h-[400px] w-full bg-purple-30 0 rounded-xl flex items-center justify-center overflow-hidden">
-                <div className="rounded-xl">
-                  <div className="relative flex items-center justify-center h-full w-full rounded-lg overflow-hidden ">
-                    {" "}
-                    <Image
-                      src={"/students_table.jpg"}
-                      height={3487}
-                      width={5231}
-                      alt="students sitting at table"
-                      style={{
-                        objectFit: "fill",
-                        objectPosition: "",
-                        transformOrigin: "center",
-                      }}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="h-[350px] w-full rounded-xl flex ">
-                {" "}
-                <div className="h-full w-full p-5 text-white">
-                  <h2 className="font-semibold text-[4vh] mb-5">
-                    {" "}
-                    Überschrift 1
-                  </h2>
-                  <p className="font-medium text-[2vh] md:text-[4vh]">
-                    Deinem Assistenten für juristische Exzellenz. Entdecke, wie
-                    Paranote Dein Studium effizienter und produktiver macht.
-                    Paranote ist nicht nur ein digitales Gesetzbuch, Paranote
-                    ist dein Begleiter während den Vorlesungen und im
-                    Selbststudium. Paranote sucht automatisch für dich
-                    Gesetzestexte zu den Paragrafen, die du gerade bearbeitest
-                    heraus.
-                  </p>
-                </div>
+        <div className="h-full w-full xl:w-[80%] xl:p-0 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-items-center place-items-center">
+            <div className="w-full h-full order-1 rounded-lg overflow-hidden shadow-xl">
+              <Image
+                src={"/students_table.jpg"}
+                height={3487}
+                width={5231}
+                alt="students sitting at table"
+                style={{
+                  objectFit: "contain",
+                  objectPosition: "",
+                  transformOrigin: "center",
+                }}
+              />
+            </div>
+            <div className="w-full h-max order-2">
+              {" "}
+              <div>
+                <h2 className="font-bold text-[44px] leading-none mb-5">
+                  {" "}
+                  Überschrift Eins für Paranote hier
+                </h2>
+                <p className="font-medium text-[24px] leading-snug">
+                  Deinem Assistenten für juristische Exzellenz. Entdecke, wie
+                  Paranote Dein Studium effizienter und produktiver macht.
+                </p>
               </div>
             </div>
-            <div className="flex flex-col-reverse space-y-5 space-x-0 md:space-y-0 md:flex-row md:space-x-5 items-center justify-center">
-              <div className="h-[350px] w-full rounded-xl">
-                {" "}
-                <div className="h-full w-full p-5 text-white">
-                  <h3 className="font-semibold text-[4vh] mb-5">
-                    Überschrift 2
-                  </h3>
-                  <p className="font-medium text-[2vh] md:text-[4vh]">
-                    Ab jetzt brauchst du nicht mehr in deinen Gesetzesbüchern
-                    wühlen und blättern, das übernimmt Paranote jetzt für dich.
-                    Parallel zum scrollen durch deine Dokumente oder Websites,
-                    zeigt Paranote dir den Gesetztestext zu allen Verweisen an
-                    auf die du bei der Recherche triffst. Mit nur einem Klick
-                    kannst du direkt an die richtige Stelle im jeweiligen
-                    Gesetzbuch springen.
-                  </p>
-                </div>
+            <div className="w-full h-full order-3 md:order-4 rounded-lg overflow-hidden shadow-xl">
+              <Image
+                src={"/students_table.jpg"}
+                height={3487}
+                width={5231}
+                alt="students sitting at table"
+                style={{
+                  objectFit: "contain",
+                  objectPosition: "",
+                  transformOrigin: "center",
+                }}
+              />
+            </div>
+            <div className="w-full h-max order-4 md:order-3">
+              {" "}
+              <div>
+                <h2 className="font-bold text-[44px] leading-none mb-5">
+                  {" "}
+                  Überschrift Eins für Paranote hier
+                </h2>
+                <p className="font-medium text-[24px] leading-snug">
+                  Deinem Assistenten für juristische Exzellenz. Entdecke, wie
+                  Paranote Dein Studium effizienter und produktiver macht.
+                </p>
               </div>
-              <div className="h-[400px] w-full rounded-xl flex items-center justify-center overflow-hidden ">
-                {" "}
-                <div className="rounded-lg">
-                  <div className="relative flex items-center justify-center h-full w-full rounded-lg overflow-hidden ">
-                    {" "}
-                    <Image
-                      src={"/students_table.jpg"}
-                      height={3487}
-                      width={5231}
-                      alt="students sitting at table"
-                      style={{
-                        objectFit: "contain",
-                        objectPosition: "",
-                        transformOrigin: "center",
-                      }}
-                    />
-                  </div>{" "}
-                </div>
+            </div>{" "}
+            <div className="w-full h-full order-5 rounded-lg overflow-hidden shadow-xl">
+              <Image
+                src={"/students_table.jpg"}
+                height={3487}
+                width={5231}
+                alt="students sitting at table"
+                style={{
+                  objectFit: "contain",
+                  objectPosition: "",
+                  transformOrigin: "center",
+                }}
+              />
+            </div>
+            <div className="w-full h-max order-6">
+              {" "}
+              <div>
+                <h2 className="font-bold text-[44px] leading-none mb-5">
+                  {" "}
+                  Überschrift Eins für Paranote hier
+                </h2>
+                <p className="font-medium text-[24px] leading-snug">
+                  Deinem Assistenten für juristische Exzellenz. Entdecke, wie
+                  Paranote Dein Studium effizienter und produktiver macht.
+                </p>
               </div>
             </div>
           </div>

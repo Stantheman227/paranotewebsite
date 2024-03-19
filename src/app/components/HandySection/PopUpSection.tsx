@@ -14,7 +14,7 @@ function PopUpSection() {
         </p>
       </div>
       <div className="h-full w-full flex flex-[80%] items-center justify-center">
-        <div className="max-w-full h-full ">
+        <div className="max-w-full h-full">
           <Image
             src={"/PopUp812.png"}
             alt="Bild für ParaScout"

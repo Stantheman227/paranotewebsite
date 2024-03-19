@@ -56,7 +56,6 @@ export const HandySection: React.FC<HandySectionProps> = ({ infoSection }) => {
         </div>
       </div>
       <ScriptSection />
-      <div className="h-[1px] w-full bg-white" />
       <PopUpSection />
       <WebsitePluginSection />
       <CommandXSection />

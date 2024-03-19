@@ -17,23 +17,25 @@ function CommandXSection() {
       <div className="w-full flex flex-[80%] items-center justify-center">
         <div className="max-w-full h-full w-[80%] overflow-hidden flex flex-col items-center justify-center">
           {/* START */}{" "}
-          <div className="flex flex-col items-start space-y-1  mt-4">
+          <div className="flex flex-col items-start space-y-1 mt-5 ">
             {Sachverhalt812.map((text, index) => (
               <div
                 className="text-white text-10px font-semibold text-start font-serif"
                 key={index}
+                style={{ opacity: index * 0.2 + 0.1 }} // Dynamic inline style for varying opacity
               >
                 <p>
                   {text}{" "}
                   {index === 4 && (
-                    <span className=" text-white highlight-right-to-left">
+                    <span className="text-white highlight-right-to-left">
                       § 812 I 1 Fall 1 BGB
                     </span>
                   )}
                 </p>
               </div>
             ))}
-            <div className="flex flex-row ">
+
+            <div className="flex flex-row p-5">
               <ShortcutButtons />
             </div>
           </div>{" "}

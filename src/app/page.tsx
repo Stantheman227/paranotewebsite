@@ -75,14 +75,14 @@ export default function Home() {
   }, [windowWidth]);
 
   return (
-    <main ref={scrollRef} className="h-full w-full bg-gray-200">
+    <main ref={scrollRef} className="h-full w-full bg-gray-200 ">
       <div className="w-full h-full bg-gray-200">
         {/* Conditional rendering based on window width */}
         {windowWidth !== undefined && windowWidth <= 768 ? (
           <>
             <div
               style={{ zIndex: 90 }}
-              className="flex items-center justify-between fixed inset-0 bg-gray-100 bg-opacity-75 w-full h-[75px] backdrop-blur-sm"
+              className="fixed flex items-center justify-between top-0 left-0 right-0 bg-gray-100 bg-opacity-75 w-full h-[75px] backdrop-blur-sm"
             >
               <Image
                 style={{
@@ -98,6 +98,7 @@ export default function Home() {
                 alt="Paranote_logo"
               />
               <button
+                style={{ marginRight: 20 }}
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className={`hamburger hamburger--collapse hover:opacity-40 ${
                   isMenuOpen ? "is-active" : ""
@@ -129,7 +130,7 @@ export default function Home() {
             </div>
           </>
         ) : (
-          <div className="relative h-full w-full ">
+          <div className="h-full w-full ">
             <Image
               style={{
                 zIndex: 60,

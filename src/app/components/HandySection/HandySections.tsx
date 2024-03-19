@@ -21,9 +21,9 @@ export const HandySection: React.FC<HandySectionProps> = ({ infoSection }) => {
   };
 
   return (
-    <div className="info-section mt-[75px]">
-      <div className="flex flex-col h-full">
-        <div className="h-[35%] w-full text-white p-5 flex">
+    <div className="bg-black">
+      <div className="flex flex-col h-screen">
+        <div className="h-[35%] w-full text-white p-5 flex mt-[75px]">
           <h1 className="w-full text-[5vh] text-start font-bold mb-4">
             Das smarte Gesetzbuch für dein Jurastudium.
           </h1>

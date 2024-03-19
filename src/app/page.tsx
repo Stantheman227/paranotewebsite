@@ -82,7 +82,7 @@ export default function Home() {
           <>
             <div
               style={{ zIndex: 90 }}
-              className="fixed flex items-center justify-between top-0 left-0 right-0 bg-gray-100 bg-opacity-75 w-full h-[75px] backdrop-blur-sm"
+              className="fixed flex items-center justify-between top-0 left-0 right-0 bg-gray-100 bg-opacity-35 w-full h-[75px] backdrop-blur-sm"
             >
               <Image
                 style={{

@@ -3,8 +3,8 @@ import Image from "next/image";
 
 function ScriptSection() {
   return (
-    <div className="flex flex-col text-white">
-      <div className="h-full w-full flex flex-[20%] flex-col pl-5 pr-5 pb-5 ">
+    <div className="flex flex-col text-white p-5">
+      <div className="h-full w-full flex flex-[20%] flex-col">
         <h2 className="text-3xl font-bold tracking-tighter mb-5">
           ParaScout erkennt Paragrafen in deiner PDF
         </h2>

@@ -21,24 +21,23 @@ export const HandySection: React.FC<HandySectionProps> = ({ infoSection }) => {
   };
 
   return (
-    <div className="bg-black">
+    <div className="bg-gray-100">
       <div className="flex flex-col h-screen">
-        <div className="h-[35%] w-full text-white p-5 flex mt-[50px]">
+        <div className="h-[35%] w-full text-black p-5 flex mt-[50px]">
           <h1 className="w-full text-[5vh] text-start font-bold mb-4">
             Das <span className="gradient-text-purple">smarte</span> Gesetzbuch
             für dein <span className="gradient-text-purple">Jurastudium</span>.
           </h1>
         </div>
 
-        <div className="flex items-center justify-center max-h-[40%] w-full">
-          <div className="relative h-[350px] w-[600px] flex items-center justify-center overflow-hidden">
-            <Image
-              src="/Paranote_Landingpage_Laptop.png"
-              alt="laptop"
-              fill={true}
-              style={{ objectPosition: "", objectFit: "cover" }}
-            />
-          </div>
+        <div className="h-[33vh] w-full flex items-center justify-center p-5">
+          <Image
+            src="/Paranote_Landingpage_Laptop.png"
+            alt="laptop"
+            width={5251}
+            height={3151}
+            style={{ objectPosition: "", objectFit: "contain" }}
+          />
         </div>
         <div className="text-white flex items-center justify-center p-5 h-[20%]">
           <div>
@@ -55,11 +54,13 @@ export const HandySection: React.FC<HandySectionProps> = ({ infoSection }) => {
           </div>
         </div>
       </div>
-      <ScriptSection />
-      <PopUpSection />
-      <WebsitePluginSection />
-      <CommandXSection />
-      <TrinitySection />
+      <div className="bg-black">
+        <ScriptSection />
+        <PopUpSection />
+        <WebsitePluginSection />
+        <CommandXSection />
+        <TrinitySection />
+      </div>
     </div>
   );
 };

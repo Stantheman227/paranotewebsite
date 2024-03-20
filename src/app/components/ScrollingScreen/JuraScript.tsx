@@ -171,7 +171,7 @@ const JuraScript = ({
         <div className="overflow-visible">
           <Image
             ref={svgRef1 as React.RefObject<HTMLImageElement>}
-            src={"/Paranote_PDF_SVG.svg"}
+            src={"/JuraScriptMarkiert_svg.svg"}
             height={600}
             width={600}
             alt="Jura Script Mockup Bereicherungsrecht"

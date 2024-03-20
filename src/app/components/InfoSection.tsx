@@ -6,6 +6,7 @@ import {
   WifiIcon,
   CloudIcon,
   AcademicCapIcon,
+  ComputerDesktopIcon,
 } from "@heroicons/react/24/outline";
 
 const boxData = [
@@ -13,7 +14,7 @@ const boxData = [
     id: 1,
     icon: <BookOpenIcon />,
     title: "Umfassende Gesetzesbibliothek",
-    description: "Zugriff auf bis zu 7000 deutsche Gesetze, immer griffbereit.",
+    description: "Zugriff auf bis zu 5000 deutsche Gesetze, immer griffbereit.",
   },
   {
     id: 2,
@@ -44,13 +45,20 @@ const boxData = [
     description:
       "Hilf uns, Paranote zu verbessern, indem du Teil unserer Beta-Tester wirst.",
   },
+  {
+    id: 6,
+    icon: <ComputerDesktopIcon />,
+    title: "Nur für MacOS",
+    description:
+      "Aktuell gibt es Paranote nur für MacOS. Aber keine Sorge, Windows und mobile Geräte sind auch geplant!",
+  },
 ];
 
 export default function ParanoteInfoSection() {
   return (
-    <div className="info-section h-full w-full p-5">
+    <div className="bg-gray-100 h-full w-full p-5">
       <div className="h-full w-full flex flex-col justify-center items-center space-y-20">
-        <div className="mt-12 grid grid-cols-1 min-[365px]:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5 gap-10 justify-items-center">
+        <div className="mt-12 grid grid-cols-1 min-[365px]:grid-cols-2 sm:grid-cols-3 md:grid-cols-3 min-[1150px]:grid-cols-6 gap-10 justify-items-center">
           {boxData.map((box) => (
             <div
               key={box.id}
@@ -75,15 +83,15 @@ export default function ParanoteInfoSection() {
 
         <div className="h-full w-full xl:w-[80%] xl:p-0 ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-items-center place-items-center">
-            <div className="w-full h-full order-1 rounded-lg overflow-hidden shadow-xl">
+            <div className="flex items-center justify-center w-full max-h-[500px] order-1 rounded-lg overflow-hidden shadow-xl">
               <Image
-                src={"/students_table.jpg"}
-                height={3487}
-                width={5231}
+                src={"/two_men_laptop_park.jpg"}
+                height={4000}
+                width={6000}
                 alt="students sitting at table"
                 style={{
                   objectFit: "contain",
-                  objectPosition: "",
+                  objectPosition: "center",
                   transformOrigin: "center",
                 }}
               />
@@ -93,19 +101,20 @@ export default function ParanoteInfoSection() {
               <div>
                 <h2 className="font-bold text-[44px] leading-none mb-5">
                   {" "}
-                  Überschrift Eins für Paranote hier
+                  Nutze Paranote überall
                 </h2>
                 <p className="font-medium text-[24px] leading-snug">
-                  Deinem Assistenten für juristische Exzellenz. Entdecke, wie
-                  Paranote Dein Studium effizienter und produktiver macht.
+                  Egal ob während der Vorlesung, in der Bib oder draußen im
+                  Park. Paranote kannst du überall nutzen, woauchimmer du am
+                  besten lernen kannst.
                 </p>
               </div>
             </div>
-            <div className="w-full h-full order-3 md:order-4 rounded-lg overflow-hidden shadow-xl">
+            <div className="flex items-center justify-center w-full max-h-[500px] order-3 md:order-4 rounded-lg overflow-hidden shadow-xl">
               <Image
-                src={"/students_table.jpg"}
-                height={3487}
-                width={5231}
+                src={"/gesetze_db.jpg"}
+                height={3577}
+                width={5365}
                 alt="students sitting at table"
                 style={{
                   objectFit: "contain",
@@ -117,17 +126,20 @@ export default function ParanoteInfoSection() {
             <div className="w-full h-max order-4 md:order-3">
               {" "}
               <div>
-                <h2 className="font-bold text-[44px] leading-none mb-5">
+                <h2 className="font-bold text-[44px] leading-none mb-5 hyphens-auto">
                   {" "}
-                  Überschrift Eins für Paranote hier
+                  Aktuelle Gesetzesdatenbank
                 </h2>
                 <p className="font-medium text-[24px] leading-snug">
-                  Deinem Assistenten für juristische Exzellenz. Entdecke, wie
-                  Paranote Dein Studium effizienter und produktiver macht.
+                  Paranote bietet dir die neuste Version von bis zu 5000
+                  deutscher Gesetzte, aktualisiert und konsolidiert. Online oder
+                  heruntergeladen für die Offline Nutzung, kannst du zwischen
+                  Gesetzbüchern hin- und herspringen und alles Lokal oder in der
+                  Cloud speichern.
                 </p>
               </div>
             </div>{" "}
-            <div className="w-full h-full order-5 rounded-lg overflow-hidden shadow-xl">
+            <div className="flex items-center justify-center w-full max-h-[500px] order-5 rounded-lg overflow-hidden shadow-xl">
               <Image
                 src={"/students_table.jpg"}
                 height={3487}
@@ -145,11 +157,13 @@ export default function ParanoteInfoSection() {
               <div>
                 <h2 className="font-bold text-[44px] leading-none mb-5">
                   {" "}
-                  Überschrift Eins für Paranote hier
+                  Automatische Paragrafen
                 </h2>
                 <p className="font-medium text-[24px] leading-snug">
-                  Deinem Assistenten für juristische Exzellenz. Entdecke, wie
-                  Paranote Dein Studium effizienter und produktiver macht.
+                  unser Algorithmus ist einzigartig und unterstützt dich bei der
+                  Recherche im Internet oder in deinen Dokumenten. Nie wieder
+                  Zeit und Nerven verschwenden die richtiger Paragrafen zu
+                  finden. Mache das meiste aus deiner Zeit.
                 </p>
               </div>
             </div>

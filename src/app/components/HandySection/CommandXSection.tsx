@@ -18,10 +18,10 @@ function CommandXSection() {
       <div className="w-full flex flex-[80%] items-center justify-center">
         <div className="max-w-full h-full w-[80%] overflow-hidden flex flex-col items-center justify-center">
           {/* START */}{" "}
-          <div className="flex flex-col items-start space-y-1 mt-5 ">
+          <div className="max-w-full flex flex-col items-start space-y-1 mt-5 ">
             {Sachverhalt812.map((text, index) => (
               <div
-                className="text-white text-10px font-semibold text-start font-serif"
+                className="text-white text-[14px] xs:text-[20px] font-semibold text-start font-serif"
                 key={index}
                 style={{ opacity: index * 0.2 + 0.1 }} // Dynamic inline style for varying opacity
               >

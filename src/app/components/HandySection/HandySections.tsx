@@ -10,10 +10,14 @@ import { SiApple } from "react-icons/si";
 // Define props type interface
 interface HandySectionProps {
   infoSection: React.RefObject<HTMLElement>;
+  blackSectionRef: React.RefObject<HTMLDivElement>; // Add this line
 }
 
 // Modify the component to accept props
-export const HandySection: React.FC<HandySectionProps> = ({ infoSection }) => {
+export const HandySection: React.FC<HandySectionProps> = ({
+  infoSection,
+  blackSectionRef,
+}) => {
   const scrollToInfoSection = () => {
     if (infoSection && infoSection.current) {
       infoSection.current.scrollIntoView({ behavior: "instant" });
@@ -54,7 +58,7 @@ export const HandySection: React.FC<HandySectionProps> = ({ infoSection }) => {
           </div>
         </div>
       </div>
-      <div className="bg-black">
+      <div ref={blackSectionRef} className="bg-black">
         <ScriptSection />
         <PopUpSection />
         <WebsitePluginSection />

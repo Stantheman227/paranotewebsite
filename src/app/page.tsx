@@ -17,15 +17,23 @@ export default function Home() {
   const sixthSectionRef = useRef(null);
   const seventhSectionRef = useRef(null);
   const infoSection = useRef(null);
+  const blackSectionRef = useRef(null);
+  const footerRef = useRef(null);
   const [sectionHeight, setSectionHeight] = React.useState(0);
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const navigation = [
-    { name: "Home", action: () => console.log() },
-    { name: "Features", action: () => console.log() },
-    { name: "Pricing", action: () => console.log() },
-    { name: "About", action: () => console.log() },
+    { name: "Home", action: () => scrollToTop() },
+    { name: "Features", action: () => scrollToSection(blackSectionRef) },
+    { name: "Download", action: () => scrollToSection(infoSection) },
+    { name: "About", action: () => scrollToSection(footerRef) },
   ];
+
+  const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -126,7 +134,10 @@ export default function Home() {
               )}
             </div>
             <div style={{ zIndex: 10 }}>
-              <HandySection infoSection={infoSection} />
+              <HandySection
+                infoSection={infoSection}
+                blackSectionRef={blackSectionRef}
+              />
             </div>
           </>
         ) : (
@@ -219,7 +230,9 @@ export default function Home() {
       <div id="infoSection" ref={infoSection} className="">
         <InfoSection />
       </div>
-      <Footer />
+      <div ref={footerRef}>
+        <Footer />
+      </div>
     </main>
   );
 }

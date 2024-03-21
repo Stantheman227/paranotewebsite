@@ -3,8 +3,8 @@ import Footer from "../components/Footer";
 
 function FAQ() {
   return (
-    <main className="h-full bg-black">
-      <div className="h-screen w-full flex justify-center items-center bg-black">
+    <main className="flex flex-col min-h-screen w-full bg-black">
+      <div className="flex-grow flex justify-center items-center bg-black">
         <FAQPage />
       </div>
       <Footer />

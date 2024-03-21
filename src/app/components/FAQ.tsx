@@ -22,8 +22,8 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
     ? "transform rotate-90 duration-300"
     : "transform rotate-180 duration-300";
   const containerClasses = isOpen
-    ? "flex flex-col items-center p-4 bg-gray-200 shadow-md rounded-t-lg h-20"
-    : "flex flex-col items-center p-4 bg-gray-200 shadow-md rounded-lg h-20";
+    ? "flex flex-col items-center p-4 bg-gray-200 shadow-md rounded-t-lg"
+    : "flex flex-col items-center p-4 bg-gray-200 shadow-md rounded-lg";
   const answerClasses = `overflow-hidden transition-height duration-200 bg-gray-200 rounded-b-lg`;
 
   return (
@@ -34,7 +34,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
           onClick={() => setIsOpen(!isOpen)}
         >
           <h3 className="text-lg font-semibold">{question}</h3>
-          <div className="w-8 h-8 flex bg-gray-100 justify-center items-center rounded-lg relative">
+          <div className="w-12 h-12 flex bg-gray-100 justify-center items-center rounded-lg relative overflow-hidden">
             <div className="w-4 h-[1px] bg-black absolute"></div>
             <div
               className={`h-4 w-[1px] bg-black absolute ${toggleIconClasses}`}
@@ -156,7 +156,7 @@ const FAQPage = () => {
           Zeitmenagement und schöpfe dein volles Potenzial aus.{" "}
         </p>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {faqs.map((faq, index) => (
           <FAQItem
             innerRef={

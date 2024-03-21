@@ -3,8 +3,8 @@ import Footer from "../components/Footer";
 
 export default function Datenschutzerklärung() {
   return (
-    <div className="bg-white p-10">
-      <section className="max-w-4xl mx-auto">
+    <div className="h-full w-full bg-white">
+      <section className="max-w-4xl mx-auto p-5">
         <div className="mb-8">
           <ContactIcon className="text-black w-6 h-6" />
           <h1 className="text-2xl font-bold mt-2">Kontaktdaten</h1>

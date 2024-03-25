@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   PaintBrushIcon,
   BookOpenIcon,
@@ -8,6 +9,7 @@ import {
   AcademicCapIcon,
   ComputerDesktopIcon,
 } from "@heroicons/react/24/outline";
+import { SiApple } from "react-icons/si";
 
 const boxData = [
   {
@@ -80,6 +82,30 @@ export default function ParanoteInfoSection() {
             </div>
           ))}
         </div>
+        <div className="flex flex-col max-w-[75vw] lg:max-w-[50vw] space-y-5 items-center justify-center">
+          <p className="text-[28px] font-bold tracking-tight text-center">
+            Entdecke Paranote – Die ultimative Gesetzestext-App für Studierende
+            der Rechtswissenschaften - Nur Für MacOS
+          </p>
+          <p className="text-center">
+            Nutze die exklusive Chance, als Beta-Tester direkten Einfluss auf
+            die Entwicklung von Paranote zu nehmen. Unsere App erleichtert dir
+            das Studium, indem sie wichtige Paragrafen blitzschnell für dich
+            findet und anzeigt. Als Beta-Tester genießt du kostenlosen Zugriff
+            auf alle Funktionen und kannst uns wertvolles Feedback geben, um
+            Paranote noch besser zu machen.
+          </p>
+
+          <Link
+            className="w-40 h-14 rounded-lg bg-[#6e6af6] hover:border-[1px] hover:scale-105 active:scale-95 transform ease-in-out duration-200 flex flex-row items-center justify-center space-x-1"
+            href="https://github.com/chopperthedoc/ParanoteDownload/releases/download/prod/Paranote.dmg"
+          >
+            <SiApple className="text-white w-6 h-6" />
+            <p className="text-white text-[16px] uppercase font-light">
+              Download
+            </p>
+          </Link>
+        </div>
 
         <div className="h-full w-full xl:w-[80%] xl:p-0 ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-items-center place-items-center">
@@ -99,7 +125,7 @@ export default function ParanoteInfoSection() {
             <div className="w-full h-max order-2">
               {" "}
               <div>
-                <h2 className="font-bold text-[44px] leading-none mb-5">
+                <h2 className="font-bold text-[44px] leading-none mb-5 tracking-tighter">
                   {" "}
                   Nutze Paranote überall
                 </h2>
@@ -126,7 +152,7 @@ export default function ParanoteInfoSection() {
             <div className="w-full h-max order-4 md:order-3">
               {" "}
               <div>
-                <h2 className="font-bold text-[44px] leading-none mb-5 hyphens-auto">
+                <h2 className="font-bold text-[44px] leading-none mb-5 hyphens-auto tracking-tighter">
                   {" "}
                   Aktuelle Gesetzesdatenbank
                 </h2>
@@ -155,7 +181,7 @@ export default function ParanoteInfoSection() {
             <div className="w-full h-max order-6">
               {" "}
               <div>
-                <h2 className="font-bold text-[44px] leading-none mb-5">
+                <h2 className="font-bold text-[44px] leading-none mb-5 tracking-tighter">
                   {" "}
                   Automatische Paragrafen
                 </h2>
@@ -169,15 +195,6 @@ export default function ParanoteInfoSection() {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="h-screen w-full flex items-center justify-center">
-        <Image
-          src={"/apple_ecosystem.svg"}
-          height={1000}
-          width={1000}
-          alt="Apple Ecosystem"
-        />
       </div>
     </div>
   );

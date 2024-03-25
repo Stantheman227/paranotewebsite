@@ -5,7 +5,7 @@ import PopUpSection from "./PopUpSection";
 import WebsitePluginSection from "./WebsitePluginSection";
 import CommandXSection from "./CommandXSection";
 import TrinitySection from "./TrinitySection";
-import { SiApple } from "react-icons/si";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
 // Define props type interface
 interface HandySectionProps {
@@ -49,7 +49,7 @@ export const HandySection: React.FC<HandySectionProps> = ({
               className="w-40 h-14 rounded-lg bg-[#6e6af6] hover:border-[1px] hover:scale-105 active:scale-95 transform ease-in-out duration-200 flex flex-row items-center justify-center space-x-1"
               onClick={() => scrollToInfoSection()}
             >
-              <SiApple className="text-white w-6 h-6" />
+              <ChevronDownIcon className="text-white w-6 h-6" />
               <p className="  text-white text-[16px] uppercase font-light">
                 {" "}
                 Download{" "}

@@ -7,18 +7,20 @@ import ScalingLaptop from "./components/ScalingLaptop";
 import ScrollingScreen from "./components/ScrollingScreen/ScrollingScreen";
 import HandySection from "./components/HandySection/HandySections";
 
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
+
 export default function Home() {
-  const scrollRef = useRef(null);
-  const firstSectionRef = useRef(null);
-  const secondSectionRef = useRef(null);
-  const thirdSectionRef = useRef(null);
-  const fourthSectionRef = useRef(null);
-  const fifthSectionRef = useRef(null);
-  const sixthSectionRef = useRef(null);
-  const seventhSectionRef = useRef(null);
-  const infoSection = useRef(null);
-  const blackSectionRef = useRef(null);
-  const footerRef = useRef(null);
+  const infoSection = useRef<HTMLDivElement | null>(null);
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const firstSectionRef = useRef<HTMLDivElement | null>(null);
+  const secondSectionRef = useRef<HTMLDivElement | null>(null);
+  const thirdSectionRef = useRef<HTMLDivElement | null>(null);
+  const fourthSectionRef = useRef<HTMLDivElement | null>(null);
+  const fifthSectionRef = useRef<HTMLDivElement | null>(null);
+  const sixthSectionRef = useRef<HTMLDivElement | null>(null);
+  const seventhSectionRef = useRef<HTMLDivElement | null>(null);
+  const blackSectionRef = useRef<HTMLDivElement | null>(null);
+  const footerRef = useRef<HTMLDivElement | null>(null);
   const [sectionHeight, setSectionHeight] = React.useState(0);
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
@@ -40,6 +42,12 @@ export default function Home() {
       top: 0,
       behavior: "smooth",
     });
+  };
+
+  const scrollToInfoSection = () => {
+    if (infoSection && infoSection.current) {
+      infoSection.current.scrollIntoView({ behavior: "instant" });
+    }
   };
 
   function useWindowWidth() {
@@ -83,7 +91,7 @@ export default function Home() {
   }, [windowWidth]);
 
   return (
-    <main ref={scrollRef} className="h-full w-full bg-gray-200 ">
+    <main ref={scrollRef} className="h-full w-full bg-gray-100 ">
       <div className="w-full h-full bg-gray-200">
         {/* Conditional rendering based on window width */}
         {windowWidth !== undefined && windowWidth <= 768 ? (
@@ -152,20 +160,32 @@ export default function Home() {
                 left: 8,
               }}
               onClick={scrollToTop}
-              src={"/logo_dm.svg"}
+              src={"/logo_lm.svg"}
               height={100}
               width={200}
               alt="Paranote_logo"
             />
-            <h1
-              style={{ zIndex: 90 }}
-              className="absolute top-[45vh] left-8 font-semibold text-black 4xl:text-[30px] 3xl:text-[28px] 2xl:text-[22px] xl:text-[16px] text-[14px] tracking-thighter"
-            >
-              <span className="gradient-text-purple">Paranote</span>. Eine App{" "}
-              <br /> für dein{" "}
-              <span className="gradient-text-purple">Jurastudium</span> <br />
-              und darüber hinaus.
-            </h1>
+            <div className="absolute top-[45vh] left-8 flex flex-col items-center justify-center space-y-5">
+              <h1
+                style={{ zIndex: 90 }}
+                className="font-semibold text-black 4xl:text-[30px] 3xl:text-[28px] 2xl:text-[22px] xl:text-[16px] text-[14px] tracking-thighter"
+              >
+                <span className="gradient-text-purple">Paranote</span>. Eine App{" "}
+                <br /> für dein{" "}
+                <span className="gradient-text-purple">Jurastudium</span> <br />
+                und darüber hinaus.
+              </h1>
+              <button
+                className="w-40 h-14 bg-[#6e6af6] rounded-lg hover:border-[1px] hover:scale-105 active:scale-95 transform ease-in-out duration-200 flex flex-row items-center justify-center space-x-1"
+                onClick={() => scrollToInfoSection()}
+              >
+                <p className="  text-white text-[16px] uppercase font-light">
+                  {" "}
+                  Download{" "}
+                </p>
+                <ChevronDownIcon className="text-white w-6 h-6" />
+              </button>
+            </div>
             <ScalingLaptop
               firstSectionRef={firstSectionRef}
               secondSectionRef={secondSectionRef}

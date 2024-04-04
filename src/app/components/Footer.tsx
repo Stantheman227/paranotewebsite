@@ -19,7 +19,7 @@ const Footer = () => {
             FAQ
           </Link>
         </div>
-        <div className="text-sm text-gray-600">© 2022-2024 Paranote, Inc.</div>
+        <div className="text-sm text-gray-600">© 2022-2024 Paranote</div>
       </div>
     </footer>
   );

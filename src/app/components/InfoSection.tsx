@@ -8,6 +8,7 @@ import {
   CloudIcon,
   AcademicCapIcon,
   ComputerDesktopIcon,
+  EnvelopeIcon,
 } from "@heroicons/react/24/outline";
 import { SiApple } from "react-icons/si";
 
@@ -55,8 +56,19 @@ const boxData = [
       "Aktuell gibt es Paranote nur für MacOS. Aber keine Sorge, Windows und mobile Geräte sind auch geplant!",
   },
 ];
+// Funktion zur Generierung der zufälligen Zeichenfolge für das Email Ticket
+function generateRandomString(length = 8) {
+  const characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  let result = "";
+  for (let i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+  return result;
+}
 
 export default function ParanoteInfoSection() {
+  const randomSubject = `Ticket: [${generateRandomString()}] - Feedback`;
   return (
     <div className="bg-gray-100 h-full w-full p-5">
       <div className="h-full w-full flex flex-col justify-center items-center space-y-20">
@@ -82,36 +94,48 @@ export default function ParanoteInfoSection() {
             </div>
           ))}
         </div>
-        <div className="flex flex-col max-w-[75vw] lg:max-w-[50vw] space-y-5 items-center justify-center">
-          <p className="text-[28px] font-bold tracking-tight text-center">
-            Entdecke Paranote – Die ultimative Gesetzestext-App für Studierende
-            der Rechtswissenschaften - Nur Für MacOS
-          </p>
-          <p className="text-center">
-            Nutze die exklusive Chance, als Beta-Tester direkten Einfluss auf
-            die Entwicklung von Paranote zu nehmen. Unsere App erleichtert dir
-            das Studium, indem sie wichtige Paragrafen blitzschnell für dich
-            findet und anzeigt. Als Beta-Tester genießt du kostenlosen Zugriff
-            auf alle Funktionen und kannst uns wertvolles Feedback geben, um
-            Paranote noch besser zu machen.
-          </p>
 
-          <Link
-            className="w-40 h-14 rounded-lg bg-[#6e6af6] hover:border-[1px] hover:scale-105 active:scale-95 transform ease-in-out duration-200 flex flex-row items-center justify-center space-x-1"
-            href="https://github.com/chopperthedoc/ParanoteDownload/releases/download/prod/Paranote.dmg"
-          >
-            <SiApple className="text-white w-6 h-6" />
-            <p className="text-white text-[16px] uppercase font-light">
-              Download
-            </p>
-          </Link>
+        <div className="w-[75%] flex flex-col md:flex-row items-center justify-center rounded-xl bg-[#6e6af6] bg-opacity-100 shadow-xl p-5">
+          {" "}
+          <div className="flex w-full md:w-[50%] items-center justify-center">
+            <div className="flex flex-col space-y-10">
+              <p className="text-[60px] text-white font-bold tracking-tight">
+                Teste Paranote <br /> kostenlos
+              </p>
+              <Link
+                className="w-[250px] h-[100px] rounded-lg bg-gray-100 hover:border-[1px] hover:scale-105 active:scale-95 transform ease-in-out duration-200 flex flex-row items-center justify-center space-x-5 shadow-xl"
+                href="https://github.com/chopperthedoc/ParanoteDownload/releases/download/prod/Paranote.dmg"
+              >
+                <SiApple className="text-black w-8 h-8" />
+                <div className="flex flex-col">
+                  <p className="text-black text-[24px] font-semibold">
+                    Download
+                  </p>
+                  <p className="font-light">für MacOS</p>
+                </div>
+              </Link>{" "}
+              <p className="text-[12px] text-white font-thin">
+                Mindestanforderung: MacOS 12.0+ | 55mb
+              </p>
+            </div>
+          </div>
+          <div className="md:w-[50%] w-full h-full flex">
+            <div className="h-[400px] w-[600px] items-center justify-center flex">
+              <Image
+                src="/Paranote_Landingpage_Laptop.png"
+                alt="laptop"
+                height={1500}
+                width={2000}
+              />
+            </div>
+          </div>
         </div>
 
         <div className="h-full w-full xl:w-[80%] xl:p-0 ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-items-center place-items-center">
             <div className="flex items-center justify-center w-full max-h-[500px] order-1 rounded-lg overflow-hidden shadow-xl">
               <Image
-                src={"/two_men_laptop_park.jpg"}
+                src={"/students_table.jpg"}
                 height={4000}
                 width={6000}
                 alt="students sitting at table"
@@ -122,18 +146,34 @@ export default function ParanoteInfoSection() {
                 }}
               />
             </div>
-            <div className="w-full h-max order-2">
+            <div className="w-full h-max order-2 space-y-5">
               {" "}
               <div>
-                <h2 className="font-bold text-[44px] leading-none mb-5 tracking-tighter">
+                <h2 className="text-[44px] mb-5">
                   {" "}
-                  Nutze Paranote überall
+                  Die App, die auf Dich hört{" "}
                 </h2>
-                <p className="font-medium text-[24px] leading-snug">
-                  Egal ob während der Vorlesung, in der Bib oder draußen im
-                  Park. Paranote kannst du überall nutzen, wo auch immer du am
-                  besten lernen kannst.
+                <p className="text-[24px]">
+                  Entwickle gemeinsam mit uns Deine maßgeschneiderte Lernapp.
+                  Paranote ist aktuell in der Entwicklungsphase, was es jedem
+                  Benutzer ermöglicht, aktiv am Produkt mitzuwirken. Nutze die
+                  Chance, die App kostenlos zu testen und mit jedem Feedback,
+                  das Du gibst, neue Funktionen zu gestalten.
                 </p>
+              </div>
+              <div className="h-[75px] w-[250px] rounded-xl bg-[#6e6af6] bg-opacity-90 hover:bg-opacity-100 flex items-center justify-center active:scale-95 transform ease-in-out duration-200">
+                <a
+                  href={`mailto:support@paranote.de?subject=${encodeURIComponent(
+                    randomSubject
+                  )}`}
+                >
+                  <div className="flex flex-row items-center justify-center space-x-5">
+                    <div className="h-12 w-12 text-white">
+                      <EnvelopeIcon />
+                    </div>
+                    <p className="text-white text-[24px]">Feedback</p>
+                  </div>
+                </a>
               </div>
             </div>
             <div className="flex items-center justify-center w-full max-h-[500px] order-3 md:order-4 rounded-lg overflow-hidden shadow-xl">
@@ -152,22 +192,24 @@ export default function ParanoteInfoSection() {
             <div className="w-full h-max order-4 md:order-3">
               {" "}
               <div>
-                <h2 className="font-bold text-[44px] leading-none mb-5 hyphens-auto tracking-tighter">
+                <h2 className="text-[44px] mb-5">
                   {" "}
-                  Aktuelle Gesetzesdatenbank
+                  Notizen und Markierungen zu Gesetzen - Paranote macht&rsquo;s
+                  einfach
                 </h2>
-                <p className="font-medium text-[24px] leading-snug">
-                  Paranote bietet dir die neuste Version von bis zu 5000
-                  deutscher Gesetzte, aktualisiert und konsolidiert. Online oder
-                  heruntergeladen für die Offline Nutzung, kannst du zwischen
-                  Gesetzbüchern hin- und herspringen und alles Lokal oder in der
-                  Cloud speichern.
+                <p className="text-[24px]">
+                  Mit Paranote erhältst Du Zugriff auf die aktuellsten Fassungen
+                  von über 5000 deutschen Gesetzen, die kontinuierlich auf den
+                  neuesten Stand gebracht werden. Nutze die Möglichkeit,
+                  persönliche Notizen und Markierungen zu Deinen Gesetzen
+                  hinzuzufügen und sowohl online als auch offline darauf
+                  zuzugreifen – alles vereint in unserer zentralen Datenbank.
                 </p>
               </div>
             </div>{" "}
             <div className="flex items-center justify-center w-full max-h-[500px] order-5 rounded-lg overflow-hidden shadow-xl">
               <Image
-                src={"/students_table.jpg"}
+                src={"/two_men_laptop_park.jpg"}
                 height={3487}
                 width={5231}
                 alt="students sitting at table"
@@ -181,15 +223,14 @@ export default function ParanoteInfoSection() {
             <div className="w-full h-max order-6">
               {" "}
               <div>
-                <h2 className="font-bold text-[44px] leading-none mb-5 tracking-tighter">
-                  {" "}
-                  Automatische Paragrafen
-                </h2>
-                <p className="font-medium text-[24px] leading-snug">
-                  Unser Algorithmus ist einzigartig und unterstützt dich bei der
-                  Recherche im Internet oder in deinen Dokumenten. Nie wieder
-                  Zeit und Nerven verschwenden die richtigen Paragrafen zu
-                  finden. Mache das meiste aus deiner Zeit.
+                <h2 className="text-[44px] mb-5"> Automatische Paragrafen</h2>
+                <p className="text-[24px]">
+                  Paranote hat das Ziel, die Digitalisierung in der
+                  Rechtswissenschaft deutlich voranzubringen. Es geht darum,
+                  juristische Recherchen neu zu konzipieren, indem es die Suche
+                  nach Gesetzestexten vereinfacht und Methoden für Forschung und
+                  Lernen zentralisiert, um so mehr Zeit für die wesentliche
+                  Arbeit zu schaffen.
                 </p>
               </div>
             </div>

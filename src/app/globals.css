@@ -14,7 +14,7 @@ html {
 }
 
 .scrollingScreenMain{
-  background-image: url("/wallpaper.png");
+  background-image: url("/wallpaper.jpg");
   background-blend-mode: overlay;
   background-size: cover;
 }

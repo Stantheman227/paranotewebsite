@@ -77,7 +77,7 @@ const ScalingLaptop = ({
         ref={laptopWrapRef}
         className="relative h-[75%] w-[50%] flex items-center justify-center"
       >
-        <div className="absolute h-[756px] w-[1260px] items-center justify-center flex pointer-events-none">
+        <div className="absolute h-[982px] w-[1306px] items-center justify-center flex pointer-events-none">
           <Image
             src="/Paranote_Landingpage_Laptop.png"
             alt="laptop"

@@ -95,12 +95,12 @@ export default function ParanoteInfoSection() {
           ))}
         </div>
 
-        <div className="w-[75%] flex flex-col md:flex-row items-center justify-center rounded-xl bg-[#6e6af6] bg-opacity-100 shadow-xl p-5">
+        <div className="w-full xl:w-[75%] flex flex-col md:flex-row items-center justify-center rounded-xl bg-[#6e6af6] bg-opacity-100 shadow-xl p-5">
           {" "}
           <div className="flex w-full md:w-[50%] items-center justify-center">
             <div className="flex flex-col space-y-10">
               <p className="text-[60px] text-white font-bold tracking-tight">
-                Teste Paranote <br /> kostenlos
+                Teste Paranote <br /> kostenlos.
               </p>
               <Link
                 className="w-[250px] h-[100px] rounded-lg bg-gray-100 hover:border-[1px] hover:scale-105 active:scale-95 transform ease-in-out duration-200 flex flex-row items-center justify-center space-x-5 shadow-xl"
@@ -131,7 +131,7 @@ export default function ParanoteInfoSection() {
           </div>
         </div>
 
-        <div className="h-full w-full xl:w-[80%] xl:p-0 ">
+        <div className="h-full w-full xl:w-[75%] xl:p-0 ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-items-center place-items-center">
             <div className="flex items-center justify-center w-full max-h-[500px] order-1 rounded-lg overflow-hidden shadow-xl">
               <Image

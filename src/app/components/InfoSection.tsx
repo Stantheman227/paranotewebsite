@@ -131,7 +131,7 @@ export default function ParanoteInfoSection() {
                 </h2>
                 <p className="font-medium text-[24px] leading-snug">
                   Egal ob während der Vorlesung, in der Bib oder draußen im
-                  Park. Paranote kannst du überall nutzen, woauchimmer du am
+                  Park. Paranote kannst du überall nutzen, wo auch immer du am
                   besten lernen kannst.
                 </p>
               </div>
@@ -186,9 +186,9 @@ export default function ParanoteInfoSection() {
                   Automatische Paragrafen
                 </h2>
                 <p className="font-medium text-[24px] leading-snug">
-                  unser Algorithmus ist einzigartig und unterstützt dich bei der
+                  Unser Algorithmus ist einzigartig und unterstützt dich bei der
                   Recherche im Internet oder in deinen Dokumenten. Nie wieder
-                  Zeit und Nerven verschwenden die richtiger Paragrafen zu
+                  Zeit und Nerven verschwenden die richtigen Paragrafen zu
                   finden. Mache das meiste aus deiner Zeit.
                 </p>
               </div>

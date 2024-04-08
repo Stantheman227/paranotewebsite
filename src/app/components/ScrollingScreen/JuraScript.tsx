@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
@@ -162,7 +162,7 @@ const JuraScript = ({
   return (
     <div
       ref={sectionRef}
-      className="absolute inset-0 flex items-center justify-start w-full overflow-hidden"
+      className="absolute inset-0 flex items-center justify-start w-full overflow-hidden "
     >
       <div
         ref={svgWrapRef}

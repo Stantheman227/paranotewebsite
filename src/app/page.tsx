@@ -104,7 +104,6 @@ export default function Home() {
         start: "top bottom",
         end: "top bottom",
         scrub: true,
-        markers: true,
         onEnter: () => setLogoSource("/ParaNoteLogoDM@3x.png"),
         onEnterBack: () => setLogoSource("/ParaNoteLogoLM@3x.png"),
       },

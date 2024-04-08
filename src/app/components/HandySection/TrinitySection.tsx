@@ -6,7 +6,7 @@ function TrinitySection() {
     <div className="p-5 flex flex-col items-center text-white">
       <div className="h-full w-full flex flex-[20%] flex-col mb-5">
         <h2 className="text-3xl font-bold tracking-tighter mb-5">
-          Notiere, Markiere und Organisiere aus deiner Menubar App.
+          Notiere & Markiere direkt in deinem Gesetzbuch.
         </h2>
         <p>
           In deiner Menubar App, kannst du auf all deine Notizen, Markierungen,

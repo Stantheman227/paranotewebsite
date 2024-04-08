@@ -10,11 +10,11 @@ import { ChevronDownIcon } from "@heroicons/react/24/outline";
 // Define props type interface
 interface HandySectionProps {
   infoSection: React.RefObject<HTMLElement>;
-  blackSectionRef: React.RefObject<HTMLDivElement>; // Add this line
+  blackSectionRef: React.RefObject<HTMLDivElement>;
 }
 
 // Modify the component to accept props
-export const HandySection: React.FC<HandySectionProps> = ({
+const HandySection: React.FC<HandySectionProps> = ({
   infoSection,
   blackSectionRef,
 }) => {
@@ -27,13 +27,11 @@ export const HandySection: React.FC<HandySectionProps> = ({
   return (
     <div className="bg-gray-100">
       <div className="flex flex-col h-screen">
-        <div className="h-[35%] w-full text-black p-5 flex mt-[50px]">
+        <div className="h-[35%] w-full text-gray-800 p-5 flex mt-[50px]">
           <h1 className="w-full text-[5vh] text-start font-bold mb-4">
-            Das <span className="gradient-text-purple">smarte</span> Gesetzbuch
-            für dein <span className="gradient-text-purple">Jurastudium</span>.
+            Gesetze Anwenden, während andere noch blättern.
           </h1>
         </div>
-
         <div className="h-[33vh] w-full flex items-center justify-center p-5">
           <Image
             src="/Paranote_Landingpage_Laptop.png"
@@ -43,6 +41,7 @@ export const HandySection: React.FC<HandySectionProps> = ({
             style={{ objectPosition: "", objectFit: "contain" }}
           />
         </div>
+
         <div className="text-white flex items-center justify-center p-5 h-[20%]">
           <div>
             <button
@@ -50,20 +49,46 @@ export const HandySection: React.FC<HandySectionProps> = ({
               onClick={() => scrollToInfoSection()}
             >
               <ChevronDownIcon className="text-white w-6 h-6" />
-              <p className="  text-white text-[16px] uppercase font-light">
-                {" "}
-                Download{" "}
+              <p className="text-white text-[16px] uppercase font-light">
+                Download
               </p>
             </button>
           </div>
         </div>
       </div>
-      <div ref={blackSectionRef} className="bg-black">
-        <ScriptSection />
-        <PopUpSection />
-        <WebsitePluginSection />
-        <CommandXSection />
-        <TrinitySection />
+      {/* Sections container with fixed background and black overlay */}
+      <div
+        ref={blackSectionRef}
+        style={{
+          position: "relative", // Needed for overlay positioning
+          backgroundImage: 'url("/wallpaper.jpg")',
+          backgroundSize: "cover",
+          backgroundAttachment: "fixed",
+          width: "100%",
+          minHeight: "100vh",
+        }}
+      >
+        {/* Black overlay with 85% opacity */}
+        <div
+          style={{
+            position: "absolute", // Overlay uses absolute positioning
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0, 0, 0, 0.85)", // Black with 85% opacity
+          }}
+        />
+        {/* Your section components will be rendered above the overlay */}
+        <div style={{ position: "relative", zIndex: 2 }}>
+          {" "}
+          {/* Ensure content is above the overlay */}
+          <ScriptSection />
+          <PopUpSection />
+          <WebsitePluginSection />
+          <CommandXSection />
+          <TrinitySection />
+        </div>
       </div>
     </div>
   );

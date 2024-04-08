@@ -160,17 +160,17 @@ export default function ParanoteInfoSection() {
                   das Du gibst, neue Funktionen zu gestalten.
                 </p>
               </div>
-              <div className="h-[75px] w-[250px] rounded-xl bg-[#6e6af6] bg-opacity-90 hover:bg-opacity-100 flex items-center justify-center active:scale-95 transform ease-in-out duration-200">
+              <div className="h-[35px] w-[140px] rounded-xl bg-[#6e6af6] bg-opacity-90 hover:bg-opacity-100 flex items-center justify-center active:scale-95 transform ease-in-out duration-200">
                 <a
                   href={`mailto:support@paranote.de?subject=${encodeURIComponent(
                     randomSubject
                   )}`}
                 >
-                  <div className="flex flex-row items-center justify-center space-x-5">
-                    <div className="h-12 w-12 text-white">
+                  <div className="flex flex-row items-center justify-center space-x-2">
+                    <div className="h-6 w-6 text-white">
                       <EnvelopeIcon />
                     </div>
-                    <p className="text-white text-[24px]">Feedback</p>
+                    <p className="text-white text-[18px]">Feedback</p>
                   </div>
                 </a>
               </div>

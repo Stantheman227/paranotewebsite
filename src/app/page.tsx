@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import InfoSection from "./components/InfoSection";
 import Footer from "./components/Footer";
 import ScalingLaptop from "./components/ScalingLaptop";
@@ -10,6 +11,8 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
+import { ArrowDownIcon } from "@heroicons/react/24/solid";
+import { SiApple } from "react-icons/si";
 
 export default function Home() {
   const infoSection = useRef<HTMLDivElement | null>(null);
@@ -220,6 +223,39 @@ export default function Home() {
                 width={200}
                 alt="Paranote_logo"
               />
+            </div>
+
+            <div
+              className="fixed z-60 cursor-pointer top-8 right-8 flex justify-center items-center"
+              style={{
+                zIndex: 60,
+                objectFit: "contain",
+                position: "fixed",
+                cursor: "pointer",
+                top: 32,
+                right: 32,
+              }}
+            >
+              <Link
+                className="group relative w-[100px] hover:w-[130px] h-[32px] hover:h-[55px] rounded-lg hover:rounded-xl bg-[#6e6af6] scale-100 hover:scale-105 active:scale-95 transform ease-in-out duration-300 flex items-center justify-center shadow-xl overflow-hidden"
+                href="https://github.com/chopperthedoc/ParanoteDownload/releases/download/prod/Paranote.dmg"
+              >
+                <div className="absolute left-0 right-0 flex justify-center opacity-0 group-hover:opacity-100 duration-300 font-thin hover:font-light"></div>
+                <div className="z-10 flex flex-col items-center justify-center hover:p-0 pt-4 h-full w-full">
+                  <div className="flex flex-row space-x-2 items-center justify-center">
+                    {" "}
+                    <p className="text-white text-sm">Download</p>
+                    <ArrowDownIcon className="text-white w-3 h-3 font-semibold" />
+                  </div>
+
+                  <div className="flex-row flex space-x-1 items-center justify-center">
+                    <SiApple className="text-white w-3 h-3 opacity-0 group-hover:opacity-100 duration-300" />
+                    <p className="text-white text-xs opacity-0 group-hover:opacity-100 duration-300">
+                      MacOS
+                    </p>
+                  </div>
+                </div>
+              </Link>
             </div>
 
             <div

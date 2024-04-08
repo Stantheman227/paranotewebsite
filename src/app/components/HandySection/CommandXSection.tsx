@@ -8,7 +8,7 @@ function CommandXSection() {
       <div className="h-full w-full flex flex-[20%] flex-col">
         <h2 className="text-3xl font-bold tracking-tighter mb-5">
           Command + X <br />
-          für ParaScout in jedem Textfeld
+          für ParaScout in jedem Text
         </h2>
         <p>
           Mit der Tastenkombination Command + X kannst du aus jedem markierten

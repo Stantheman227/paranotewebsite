@@ -9,8 +9,8 @@ function WebsitePluginSection() {
           Plugin für deinen Webbrowser
         </h2>
         <p>
-          Unser Safari-Browser Plugin bietet einen nahtlosen übergang, um auch
-          auf Webseiten die automatische Paragrafenerkennung zu verwenden.{" "}
+          Das Safari Plugin bietet einen nahtlosen übergang, um auch auf
+          Webseiten die automatische Paragrafenerkennung zu verwenden.{" "}
         </p>
       </div>
       <div className="h-full w-full flex flex-[80%] items-center justify-center">

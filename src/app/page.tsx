@@ -6,6 +6,8 @@ import Footer from "./components/Footer";
 import ScalingLaptop from "./components/ScalingLaptop";
 import ScrollingScreen from "./components/ScrollingScreen/ScrollingScreen";
 import HandySection from "./components/HandySection/HandySections";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
@@ -21,8 +23,10 @@ export default function Home() {
   const seventhSectionRef = useRef<HTMLDivElement | null>(null);
   const blackSectionRef = useRef<HTMLDivElement | null>(null);
   const footerRef = useRef<HTMLDivElement | null>(null);
+  const logoRef = useRef<HTMLDivElement | null>(null);
   const [sectionHeight, setSectionHeight] = React.useState(0);
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [logoSource, setLogoSource] = useState("/ParaNoteLogoLM@3x.png");
 
   const navigation = [
     { name: "Home", action: () => scrollToTop() },
@@ -84,11 +88,40 @@ export default function Home() {
         });
       });
     }
-
     return () => {
       if (locomotiveScroll) locomotiveScroll.destroy();
     };
   }, [windowWidth]);
+
+  // GSAP ScrollTrigger for logo change
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Timeline for the third section with scrollTrigger
+    const tlThirdSection = gsap.timeline({
+      scrollTrigger: {
+        trigger: thirdSectionRef.current,
+        start: "top bottom",
+        end: "top bottom",
+        scrub: true,
+        markers: true,
+        onEnter: () => setLogoSource("/ParaNoteLogoDM@3x.png"),
+        onEnterBack: () => setLogoSource("/ParaNoteLogoLM@3x.png"),
+      },
+    });
+
+    // Timeline for the infoSection with scrollTrigger
+    const tlSeventhSection = gsap.timeline({
+      scrollTrigger: {
+        trigger: infoSection.current,
+        start: "top top",
+        end: "top top",
+        scrub: true,
+        onEnter: () => setLogoSource("/ParaNoteLogoLM@3x.png"),
+        onEnterBack: () => setLogoSource("/ParaNoteLogoDM@3x.png"),
+      },
+    });
+  }, []);
 
   return (
     <main ref={scrollRef} className="h-full w-full bg-gray-100 ">
@@ -108,7 +141,7 @@ export default function Home() {
                   marginLeft: 20,
                 }}
                 onClick={scrollToTop}
-                src={"/logo_lm.svg"}
+                src={"/ParaNoteLogoLM@3x.png"}
                 height={70}
                 width={140}
                 alt="Paranote_logo"
@@ -150,21 +183,23 @@ export default function Home() {
           </>
         ) : (
           <div className="h-full w-full ">
-            <Image
-              style={{
-                zIndex: 60,
-                objectFit: "contain",
-                position: "fixed",
-                cursor: "pointer",
-                top: 8,
-                left: 8,
-              }}
-              onClick={scrollToTop}
-              src={"/logo_lm.svg"}
-              height={100}
-              width={200}
-              alt="Paranote_logo"
-            />
+            <div ref={logoRef}>
+              <Image
+                style={{
+                  zIndex: 60,
+                  objectFit: "contain",
+                  position: "fixed",
+                  cursor: "pointer",
+                  top: 32,
+                  left: 32,
+                }}
+                onClick={scrollToTop}
+                src={logoSource}
+                height={100}
+                width={200}
+                alt="Paranote_logo"
+              />
+            </div>
             <div className="absolute top-[45vh] left-8 flex flex-col items-center justify-center space-y-5">
               <h1
                 style={{ zIndex: 90 }}

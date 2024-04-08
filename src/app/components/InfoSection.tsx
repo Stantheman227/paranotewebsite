@@ -133,9 +133,9 @@ export default function ParanoteInfoSection() {
 
         <div className="h-full w-full xl:w-[75%] xl:p-0 ">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 justify-items-center place-items-center">
-            <div className="flex items-center justify-center w-full max-h-[500px] order-1 rounded-lg overflow-hidden shadow-xl">
+            <div className="flex items-center justify-center w-full max-h-[500px] order-1 rounded-lg overflow-hidden">
               <Image
-                src={"/students_table.jpg"}
+                src={"/Bildschirm_mit_Menschen.png"}
                 height={4000}
                 width={6000}
                 alt="students sitting at table"
@@ -194,8 +194,7 @@ export default function ParanoteInfoSection() {
               <div>
                 <h2 className="text-[44px] mb-5">
                   {" "}
-                  Notizen und Markierungen zu Gesetzen - Paranote macht&rsquo;s
-                  einfach
+                  Paranote macht&rsquo;s einfach
                 </h2>
                 <p className="text-[24px]">
                   Mit Paranote erhältst Du Zugriff auf die aktuellsten Fassungen

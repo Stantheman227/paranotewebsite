@@ -291,7 +291,6 @@ const ScrollScreen = ({
         trigger: thirdSectionRef.current,
         start: "top bottom",
         end: "top center",
-        once: true,
         scrub: true,
       },
     });

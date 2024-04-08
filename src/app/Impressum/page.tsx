@@ -7,7 +7,7 @@ export default function Impressum() {
     <main className="flex flex-col min-h-screen bg-gray-100">
       <div className="flex-grow p-5">
         <Image
-          src={"/logo_lm.svg"}
+          src={"/ParaNoteLogoLM@3x.png"}
           height={70}
           width={140}
           alt="Paranote_logo"
@@ -28,7 +28,8 @@ export default function Impressum() {
           <h2 className="text-2xl font-bold tracking-tight">
             Kontaktmöglichkeiten
           </h2>
-          <p>E-Mail: mail@paranote.de</p>
+          <p className="mb-2">E-Mail: mail@paranote.de</p>
+          <p>Veantwortlicher: Gabriel Acan </p>
         </div>
       </div>
       <Footer />

@@ -95,9 +95,8 @@ const Trinity = ({
       text: {
         text1: "Finde deine Notizen in Sekunden",
         text2:
-          "Mit Farbmarkierungen, Hashtags und einer Volltextsuche findest du Alles schnell wieder und bleibst immer auf dem neusten Stand.",
-        text3:
-          "Egal, wie viele Notizen du erstellt hast - du behälst immer den Überblick.",
+          "Optimiere deine Rechercheorganisation: Paranote vereint alles Nötige zur Organisation von Gesetzestexten. Markiere Notizen farblich nach Themen oder Büchern für strukturierte Übersicht und nutze umfangreiche Textbearbeitungsfunktionen für individuelle Gestaltung. Mit Hashtags schaffst du Shortcuts, um schnell auf relevante Rechtsthemen zuzugreifen.",
+        text3: "",
       },
       layout: "textRight",
     },
@@ -179,20 +178,14 @@ const Trinity = ({
   const renderTextContentForSection0 = (text: any) => {
     return (
       <div className="flex flex-col text-white space-y-2">
-        <h1 className=" text-[18px] xl:text-[23px] 2xl:text-[26px] 3xl:text-[28px] 4xl:text-[30px] mb-1">
+        <h1 className=" text-[18px] xl:text-[23px] 2xl:text-[26px] 3xl:text-[28px] 4xl:text-[30px] font-semibold mb-1">
           {text.text1}
         </h1>
-        <h2 className="text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] 4xl:text-[24px] font-thin">
+        <h2 className="text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] 4xl:text-[24px] font-light">
           {text.text2}
         </h2>
-        <h2 className="text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] 4xl:text-[24px] font-thin">
+        <h2 className="text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] 4xl:text-[24px] font-light">
           {text.text3}
-        </h2>
-        <h2 className="text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] 4xl:text-[24px] font-thin">
-          {text.text4}
-        </h2>
-        <h2 className="text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] 4xl:text-[24px] font-thin">
-          {text.text5}
         </h2>
       </div>
     );
@@ -219,7 +212,7 @@ const Trinity = ({
             </div>
 
             <div className="flex-[90%] flex-col space-y-1">
-              <h2 className=" text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] 4xl:text-[24px]">
+              <h2 className=" text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] 4xl:text-[24px] font-light">
                 {text.text2}
               </h2>
               <p className="text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[20px] 4xl:text-[20px] font-thin">
@@ -238,7 +231,7 @@ const Trinity = ({
               />{" "}
             </div>
             <div className="flex-[90%] flex-col space-y-1">
-              <h2 className=" text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] 4xl:text-[24px]">
+              <h2 className=" text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] 4xl:text-[24px] font-light">
                 {text.text3}
               </h2>
               <p className=" text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[20px] 4xl:text-[20px] font-thin">
@@ -257,7 +250,7 @@ const Trinity = ({
               />{" "}
             </div>
             <div className="flex-[90%] flex-col space-y-1">
-              <h2 className=" text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] 4xl:text-[24px]">
+              <h2 className=" text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] 4xl:text-[24px] font-light">
                 {text.text4}
               </h2>
               <p className=" text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[20px] 4xl:text-[20px] font-thin">
@@ -277,7 +270,7 @@ const Trinity = ({
               />{" "}
             </div>
             <div className="flex-[90%] flex-col space-y-1">
-              <h2 className=" text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] 4xl:text-[24px]">
+              <h2 className=" text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] 4xl:text-[24px] font-light">
                 {text.text5}
               </h2>
               <p className=" text-[14px] xl:text-[16px] 2xl:text-[18px] 3xl:text-[20px] 4xl:text-[20px] font-thin">
@@ -313,10 +306,10 @@ const Trinity = ({
             </div>
           </div>
 
-          <h2 className=" text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] 4xl:text-[24px] font-thin">
+          <h2 className=" text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] 4xl:text-[24px] font-light">
             {text.text2}
           </h2>
-          <h3 className="text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] 4xl:text-[24px] font-thin">
+          <h3 className="text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] 4xl:text-[24px] font-light">
             {text.text3}
           </h3>
         </>
@@ -361,7 +354,7 @@ const Trinity = ({
         {activeIndex !== null && (
           <div className={`w-full flex flex-row `}>
             <div className="flex w-[50%] items-start justify-start ">
-              <div className="space-y-1 text-white ">
+              <div className="space-y-5 text-white ">
                 {renderSectionContent(activeIndex, sections[activeIndex].text)}
               </div>
             </div>

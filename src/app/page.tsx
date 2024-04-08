@@ -23,6 +23,7 @@ export default function Home() {
   const seventhSectionRef = useRef<HTMLDivElement | null>(null);
   const blackSectionRef = useRef<HTMLDivElement | null>(null);
   const footerRef = useRef<HTMLDivElement | null>(null);
+  const paraNoteRef = useRef<HTMLDivElement | null>(null);
   const logoRef = useRef<HTMLDivElement | null>(null);
   const [sectionHeight, setSectionHeight] = React.useState(0);
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -93,7 +94,7 @@ export default function Home() {
     };
   }, [windowWidth]);
 
-  // GSAP ScrollTrigger for logo change
+  // GSAP ScrollTrigger for Logo DM to LM and vice verca
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -120,6 +121,27 @@ export default function Home() {
         onEnterBack: () => setLogoSource("/ParaNoteLogoDM@3x.png"),
       },
     });
+  }, []);
+
+  // GSAP SCROLL TRIGGER FOR DISSAPERING SLOGAN
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Timeline for the third section with scrollTrigger
+    const tlSlogan = gsap.timeline({
+      scrollTrigger: {
+        trigger: logoRef.current,
+        start: "top top",
+        end: "top top-=500px",
+        scrub: true,
+      },
+    });
+
+    tlSlogan.fromTo(
+      paraNoteRef.current,
+      { opacity: 1 },
+      { opacity: 0, duration: 1, ease: "none" }
+    );
   }, []);
 
   return (
@@ -199,18 +221,23 @@ export default function Home() {
                 alt="Paranote_logo"
               />
             </div>
-            <div className="absolute top-[45vh] left-8 flex flex-col items-center justify-center space-y-5">
-              <h1
-                style={{ zIndex: 90 }}
-                className="font-semibold text-black 4xl:text-[30px] 3xl:text-[28px] 2xl:text-[22px] xl:text-[16px] text-[14px] tracking-thighter"
-              >
-                <span className="gradient-text-purple">Paranote</span>. Eine App{" "}
-                <br /> für dein{" "}
-                <span className="gradient-text-purple">Jurastudium</span> <br />
-                und darüber hinaus.
+
+            <div
+              ref={paraNoteRef}
+              className="absolute top-[45vh] left-8 flex flex-col items-start"
+            >
+              <h1 className="gradient-text-purple font-semibold text-[38px]">
+                Paranote
               </h1>
+              <h2
+                style={{ zIndex: 90 }}
+                className="font-medium text-gray-800 4xl:text-[30px] 3xl:text-[28px] 2xl:text-[22px] xl:text-[16px] text-[14px] tracking-thighter leading-9"
+              >
+                Gesetze Anwenden, <br /> während andere <br /> noch blättern.
+              </h2>
+
               <button
-                className="w-40 h-14 bg-[#6e6af6] rounded-lg hover:border-[1px] hover:scale-105 active:scale-95 transform ease-in-out duration-200 flex flex-row items-center justify-center space-x-1"
+                className="w-40 h-14 bg-[#6e6af6] rounded-lg hover:border-[1px] hover:scale-105 active:scale-95 transform ease-in-out duration-200 flex flex-row items-center justify-center space-x-1 mt-5"
                 onClick={() => scrollToInfoSection()}
               >
                 <p className="  text-white text-[16px] uppercase font-light">
@@ -220,6 +247,7 @@ export default function Home() {
                 <ChevronDownIcon className="text-white w-6 h-6" />
               </button>
             </div>
+
             <ScalingLaptop
               firstSectionRef={firstSectionRef}
               secondSectionRef={secondSectionRef}

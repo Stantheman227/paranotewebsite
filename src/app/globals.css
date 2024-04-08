@@ -150,6 +150,8 @@ body::-webkit-scrollbar-thumb:hover {
 body {
   scrollbar-width: auto; /* "auto" oder "thin" - hier als auto für breitere Scrollbar */
   scrollbar-color: linear-gradient(45deg, rgba(110,106,246,1), rgba(199,148,233,1)) transparent; /* Griff- und Track-Farbe, transparenter Track */
+  font-family: 'Inter', sans-serif; /* Fallback auf eine generische Schriftart, falls nötig */
+
 }
 
 /*                 HANDY SECTION                      */ 

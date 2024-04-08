@@ -8,7 +8,7 @@ export const phrases = [
   "Gesetztestexte direkt als Pop-up",
   "Plugin für deinen Webbrowser",
   "Command + X für ParaScout in jedem Textfeld",
-  "Notieren, Makrieren & Kommentieren direkt in DEINEM Gesetzbuch",
+  "Notiere & Markiere direkt in deinem Gesetzbuch",
 ];
 
 export type PageConstantsType = typeof phrases;
@@ -23,19 +23,19 @@ export const cardPositions = [
 
 export const Paragraphen = [
   {
-    Header: "§ 821 Einrede der Bereicherung",
+    Header: "§ 821 BGB Einrede der Bereicherung",
     Body: [
       "Wer ohne rechtlichen Grund eine Verbindlichkeit eingeht, kann die Erfüllung auch dann verweigern, wenn der Anspruch auf Befreiung von der Verbindlichkeit verjährt ist.",
     ],
   },
   {
-    Header: "§ 781 Schuldanerkenntnis",
+    Header: "§ 781 BGB Schuldanerkenntnis",
     Body: [
       "Zur Gültigkeit eines Vertrags, durch den das Bestehen eines Schuldverhältnisses anerkannt wird (Schuldanerkenntnis), ist schriftliche Erteilung der Anerkennungserklärung erforderlich. Die Erteilung der Anerkennungserklärung in elektronischer Form ist ausgeschlossen. Ist für die Begründung des Schuldverhältnisses, dessen Bestehen anerkannt wird, eine andere Form vorgeschrieben, so bedarf der Anerkennungsvertrag dieser Form.",
     ],
   },
   {
-    Header: "§ 364 Annahme an Erfüllungs statt",
+    Header: "§ 364 BGB Annahme an Erfüllungs statt",
     Body: [
       {
         SubHeader: "",
@@ -47,7 +47,7 @@ export const Paragraphen = [
     ],
   },
   {
-    Header: "§ 242 Leistung nach Treu und Glauben",
+    Header: "§ 242 BGB eistung nach Treu und Glauben",
     Body: [
       "Der Schuldner ist verpflichtet, die Leistung so zu bewirken, wie Treu und Glauben mit Rücksicht auf die Verkehrssitte es erfordern.",
     ],
@@ -56,13 +56,13 @@ export const Paragraphen = [
 
 export const ParagraphenForCaroussel = [
   {
-    Header: "§ 810 Einsicht in Urkunden",
+    Header: "§ 810 BGB Einsicht in Urkunden",
     Body: [
       "Wer ein rechtliches Interesse daran hat, eine in fremdem Besitz befindliche Urkunde einzusehen, kann von dem Besitzer die Gestattung der Einsicht verlangen, wenn die Urkunde in seinem Interesse errichtet oder in der Urkunde ein zwischen ihm und einem anderen bestehendes Rechtsverhältnis beurkundet ist oder wenn die Urkunde Verhandlungen über ein Rechtsgeschäft enthält, die zwischen ihm und einem anderen oder zwischen einem von beiden und einem gemeinschaftlichen Vermittler gepflogen worden sind.",
     ],
   },
   {
-    Header: "§ 811 Vorlegungsort, Gefahr und Kosten",
+    Header: "§ 811 BGB Vorlegungsort, Gefahr und Kosten",
     Body: [
       "(1) Die Vorlegung hat in den Fällen der §§ 809, 810 an dem Orte zu erfolgen, an welchem sich die vorzulegende Sache befindet. Jeder Teil kann die Vorlegung an einem anderen Orte verlangen, wenn ein wichtiger Grund vorliegt.",
       "(2) Die Gefahr und die Kosten hat derjenige zu tragen, welcher die Vorlegung verlangt. Der Besitzer kann die Vorlegung verweigern, bis ihm der andere Teil die Kosten vorschießt und wegen der Gefahr Sicherheit leistet.",
@@ -76,14 +76,14 @@ export const ParagraphenForCaroussel = [
     ],
   },
   {
-    Header: "§ 813 Erfüllung trotz Einrede",
+    Header: "§ 813 BGB Erfüllung trotz Einrede",
     Body: [
       "(1) Das zum Zwecke der Erfüllung einer Verbindlichkeit Geleistete kann auch dann zurückgefordert werden, wenn dem Anspruch eine Einrede entgegenstand, durch welche die Geltendmachung des Anspruchs dauernd ausgeschlossen wurde. Die Vorschrift des § 214 Abs. 2 bleibt unberührt.",
       "(2) Wird eine betagte Verbindlichkeit vorzeitig erfüllt, so ist die Rückforderung ausgeschlossen; die Erstattung von Zwischenzinsen kann nicht verlangt werden.",
     ],
   },
   {
-    Header: "§ 814 Kenntnis der Nichtschuld",
+    Header: "§ 814 BGB Kenntnis der Nichtschuld",
     Body: [
       "Das zum Zwecke der Erfüllung einer Verbindlichkeit Geleistete kann nicht zurückgefordert werden, wenn der Leistende gewusst hat, dass er zur Leistung nicht verpflichtet war, oder wenn die Leistung einer sittlichen Pflicht oder einer auf den Anstand zu nehmenden Rücksicht entsprach.",
     ],

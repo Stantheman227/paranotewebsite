@@ -13,7 +13,7 @@ const Footer = () => {
             Impressum{" "}
           </Link>
           <Link href="/Datenschutz" className="hover:underline">
-            Datenschutzerkärung
+            Datenschutzerklärung
           </Link>
           <Link href="/FAQ" className="hover:underline">
             FAQ

@@ -269,7 +269,7 @@ export default function Home() {
                 style={{ zIndex: 90 }}
                 className="font-medium text-gray-800 4xl:text-[30px] 3xl:text-[28px] 2xl:text-[22px] xl:text-[16px] text-[14px] tracking-thighter leading-9"
               >
-                Gesetze Anwenden, <br /> während andere <br /> noch blättern.
+                Gesetze anwenden, <br /> während andere <br /> noch blättern.
               </h2>
 
               <button

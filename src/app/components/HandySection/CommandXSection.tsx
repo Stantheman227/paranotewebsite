@@ -12,7 +12,7 @@ function CommandXSection() {
         </h2>
         <p>
           Mit der Tastenkombination Command + X kannst du aus jedem markierten
-          Textfeld direkt an die jeweilige Stelle im Gesetzbuch springen.
+          Text direkt an die jeweilige Stelle im Gesetzbuch springen.
         </p>
       </div>
       <div className="w-full flex flex-[80%] items-center justify-center">

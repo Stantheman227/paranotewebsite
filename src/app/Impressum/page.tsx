@@ -29,7 +29,7 @@ export default function Impressum() {
             Kontaktmöglichkeiten
           </h2>
           <p className="mb-2">E-Mail: mail@paranote.de</p>
-          <p>Veantwortlicher: Gabriel Acan </p>
+          <p>Verantwortlicher: Gabriel Acan </p>
         </div>
       </div>
       <Footer />

@@ -29,7 +29,7 @@ const HandySection: React.FC<HandySectionProps> = ({
       <div className="flex flex-col h-screen">
         <div className="h-[35%] w-full text-gray-800 p-5 flex mt-[50px]">
           <h1 className="w-full text-[5vh] text-start font-bold mb-4">
-            Gesetze Anwenden, während andere noch blättern.
+            Gesetze anwenden, während andere noch blättern.
           </h1>
         </div>
         <div className="h-[33vh] w-full flex items-center justify-center p-5">

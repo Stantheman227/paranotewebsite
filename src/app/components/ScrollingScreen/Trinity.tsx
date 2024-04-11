@@ -178,9 +178,9 @@ const Trinity = ({
   const renderTextContentForSection0 = (text: any) => {
     return (
       <div className="flex flex-col text-white space-y-2">
-        <h1 className=" text-[18px] xl:text-[23px] 2xl:text-[26px] 3xl:text-[28px] 4xl:text-[30px] font-semibold mb-1">
+        <h2 className=" text-[18px] xl:text-[23px] 2xl:text-[26px] 3xl:text-[28px] 4xl:text-[30px] font-semibold mb-1">
           {text.text1}
-        </h1>
+        </h2>
         <h2 className="text-[16px] xl:text-[18px] 2xl:text-[20px] 3xl:text-[22px] 4xl:text-[24px] font-light">
           {text.text2}
         </h2>

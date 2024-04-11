@@ -6,8 +6,11 @@ import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Paranote",
-  description: "Dein Digitaler Assisten für das Jurastudium",
+  title: {
+    default: "Paranote",
+    template: "%s | Paranote",
+  },
+  description: "Dein Digitaler Assistent für das Jurastudium",
 };
 
 export default function RootLayout({
@@ -17,9 +20,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de">
-      <head>
+      {/* <head>
         <link rel="icon" href="/favicon.ico" sizes="60x60" />
-      </head>
+      </head> */}
+      <meta
+        name="google-site-verification"
+        content="q4EZ1xiqBxSgWoLcO-f9Axpcr8-ae6aNz_poqMxWpss"
+      />
       <body className={inter.className}>
         {children} <Analytics />
       </body>

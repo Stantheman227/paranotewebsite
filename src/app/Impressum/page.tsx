@@ -2,6 +2,12 @@ import React from "react";
 import Footer from "../components/Footer";
 import Image from "next/image";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Impressum",
+};
+
 export default function Impressum() {
   return (
     <main className="flex flex-col min-h-screen bg-gray-100">

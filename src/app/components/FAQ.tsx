@@ -35,9 +35,9 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
         >
           <h3 className="text-lg font-semibold">{question}</h3>
           <div className="w-12 h-12 flex bg-gray-100 justify-center items-center rounded-lg relative overflow-hidden">
-            <div className="w-4 h-[1px] bg-black absolute"></div>
+            <div className="w-4 h-[1px] bg-gray-700 absolute"></div>
             <div
-              className={`h-4 w-[1px] bg-black absolute ${toggleIconClasses}`}
+              className={`h-4 w-[1px] bg-gray-700 absolute ${toggleIconClasses}`}
             ></div>
           </div>
         </div>
@@ -142,15 +142,15 @@ const FAQPage = () => {
         <div className="bg-gray-200 shadow-md flex items-center justify-center rounded-2xl w-20 h-8 text-center font-bold p-5 mt-5 mb-5">
           <p className="text-[#6F6AF6]"> FAQ</p>
         </div>
-        <div className="gradient-text text-center box-border tracking-wide uppercase bg-clip-text font-semibold leading-8 text-lg text-white">
+        <div className="gradient-text text-center box-border tracking-wide uppercase bg-clip-text font-semibold leading-8 text-lg text-gray-700">
           Noch Fragen?
           <br />
         </div>
-        <h3 className="text-[50px] font-bold tracking-tight text-white">
+        <h3 className="text-[50px] font-bold tracking-tight text-gray-700">
           Frequently Asked Questions
           <br />
         </h3>
-        <p className="mx-auto mt-4 max-w-2xl text-white text-lg leading-2 ">
+        <p className="mx-auto mt-4 max-w-2xl text-gragray-700 text-lg leading-2 ">
           Paranote liefert dir ein Werkzeug, um den Umgang mit Paragrafen und
           Gesetzestexten so angenehmen wie möglich zu gestalten. Optimiere dein
           Zeitmenagement und schöpfe dein volles Potenzial aus.{" "}

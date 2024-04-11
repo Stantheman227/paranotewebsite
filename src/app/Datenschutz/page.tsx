@@ -1,6 +1,8 @@
 import React from "react";
 import Footer from "../components/Footer";
 import { Metadata } from "next";
+import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Datenschtzerklärung",
@@ -9,6 +11,17 @@ export const metadata: Metadata = {
 export default function Datenschutzerklärung() {
   return (
     <div className="h-full w-full bg-white">
+      <header className=" p-5">
+        <Link href="/" className="hover:underline">
+          <Image
+            src={"/ParaNoteLogoLM@3x.png"}
+            height={70}
+            width={140}
+            alt="Paranote_logo"
+            className=""
+          ></Image>
+        </Link>
+      </header>
       <section className="max-w-4xl mx-auto p-5">
         <div className="mb-8">
           <ContactIcon className="text-black w-6 h-6" />

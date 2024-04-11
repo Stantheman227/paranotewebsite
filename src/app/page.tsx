@@ -260,7 +260,7 @@ export default function Home() {
 
             <div
               ref={paraNoteRef}
-              className="top-[45vh] left-8 flex flex-col items-start min-[1375px]:rounded-none min-[1375px]:p-0 min-[1375px]:bg-oapcity-100 min-[1375px]:bg-transparent bg-white rounded-xl p-5 bg-opacity-50 backdrop-blur-md"
+              className="top-[45vh] left-8 flex flex-col items-start min-[1375px]:rounded-none min-[1375px]:p-0 min-[1375px]:bg-oapcity-100 min-[1375px]:bg-transparent bg-white rounded-xl p-5 bg-opacity-50 backdrop-blur-md min-[1375px]:backdrop-blur-none"
               style={{
                 zIndex: 60,
                 objectFit: "contain",

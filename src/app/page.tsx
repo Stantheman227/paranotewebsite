@@ -260,14 +260,20 @@ export default function Home() {
 
             <div
               ref={paraNoteRef}
-              className="absolute top-[45vh] left-8 flex flex-col items-start"
+              className="top-[45vh] left-8 flex flex-col items-start min-[1375px]:rounded-none min-[1375px]:p-0 min-[1375px]:bg-oapcity-100 min-[1375px]:bg-transparent bg-white rounded-xl p-5 bg-opacity-50 backdrop-blur-md"
+              style={{
+                zIndex: 60,
+                objectFit: "contain",
+                position: "absolute",
+                cursor: "pointer",
+              }}
             >
-              <h1 className="gradient-text-purple font-semibold text-[38px]">
+              <h1 className="gradient-text-purple font-semibold text-[38px] hidden min-[1375px]:flex">
                 Paranote
               </h1>
               <h2
                 style={{ zIndex: 90 }}
-                className="font-medium text-gray-800 4xl:text-[30px] 3xl:text-[28px] 2xl:text-[22px] xl:text-[16px] text-[14px] tracking-thighter leading-9"
+                className="font-medium text-gray-800 text-[30px] tracking-thighter leading-9"
               >
                 Gesetze anwenden, <br /> während andere <br /> noch blättern.
               </h2>

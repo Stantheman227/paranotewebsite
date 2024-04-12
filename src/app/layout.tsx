@@ -6,11 +6,13 @@ import { Analytics } from "@vercel/analytics/react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://paranote.de"),
   title: {
     default: "Paranote",
     template: "%s | Paranote",
   },
-  description: "Dein Digitaler Assistent für das Jurastudium",
+  description:
+    "Dein Digitaler Assistent für das Jurastudium und darüber hinaus. Paranote extrahiert Paragrafen aus PDF-Dateien und zeigt sie die als PopUps direkt neber deiner PDF an. Du kannst direkt Markierungen und Notizen erstellen und zwischen deinen Gesetzbüchern hin und her springen.",
 };
 
 export default function RootLayout({
@@ -20,10 +22,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de">
-      {/* <head>
-        <link rel="icon" href="/favicon.ico" sizes="60x60" />
-      </head> */}
-
       <body className={inter.className}>
         {children} <Analytics />
       </body>

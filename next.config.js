@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+// next.config.js
+const nextConfig = {
+  generateMetadata: {
+    metadataBase: "https://paranote.de",
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

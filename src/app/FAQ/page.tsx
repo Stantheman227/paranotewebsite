@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 
 function FAQ() {
   return (
-    <main className="flex flex-col min-h-screen w-full bg-white">
-      <header className=" p-5">
+    <main className="flex flex-col min-h-screen w-full bg-gray-100">
+      <header className="bg-gray-100 p-5">
         <Link href="/" className="hover:underline">
           <Image
             src={"/ParaNoteLogoLM@3x.png"}
@@ -22,7 +22,7 @@ function FAQ() {
           ></Image>
         </Link>
       </header>
-      <div className="flex-grow flex justify-center items-center bg-white">
+      <div className="flex-grow flex justify-center items-center bg-gray-100">
         <FAQPage />
       </div>
       <Footer />

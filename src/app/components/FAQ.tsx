@@ -139,10 +139,7 @@ const FAQPage = () => {
   return (
     <section className="container mx-auto p-5 space-y-5">
       <div className="flex flex-col items-center text-center rounded-lg">
-        <div className="bg-gray-200 shadow-md flex items-center justify-center rounded-2xl w-20 h-8 text-center font-bold p-5 mt-5 mb-5">
-          <p className="text-[#6F6AF6]"> FAQ</p>
-        </div>
-        <div className="gradient-text text-center box-border tracking-wide uppercase bg-clip-text font-semibold leading-8 text-lg text-gray-700">
+        <div className="gradient-text-purple text-center box-border tracking-wide uppercase bg-clip-text font-semibold leading-8 text-lg text-gray-700">
           Noch Fragen?
           <br />
         </div>

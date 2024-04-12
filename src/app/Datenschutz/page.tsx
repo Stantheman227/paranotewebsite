@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Datenschutzerklärung() {
   return (
-    <div className="h-full w-full bg-white">
+    <div className="h-full w-full bg-gray-100">
       <header className=" p-5">
         <Link href="/" className="hover:underline">
           <Image

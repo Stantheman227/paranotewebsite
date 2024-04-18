@@ -76,7 +76,6 @@ const JuraScript = ({
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    console.log(thirdSectionRef);
 
     const tl3 = gsap.timeline({
       scrollTrigger: {
@@ -135,8 +134,6 @@ const JuraScript = ({
       },
       2.5
     );
-
-    console.log("test");
   }, []);
 
   //////////////////////////////// SVG FADING OUT ANIMATION /////////////////////////////////////////

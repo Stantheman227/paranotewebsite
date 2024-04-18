@@ -108,7 +108,6 @@ const ScrollScreen = ({
   //////////////////////////// TIMELINE FOR TEXT REFS OPACITY ////////////////////////////
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    console.log(secondSectionRef);
 
     textRefsDiv.current.forEach((textDivRef, index) => {
       const ref = sectionRefs[index];
@@ -164,7 +163,6 @@ const ScrollScreen = ({
         },
 
         onComplete: () => {
-          console.log(`Animation für textRef${index + 1} beendet`);
         },
       });
 
@@ -204,7 +202,6 @@ const ScrollScreen = ({
   const scrollToSection = (sectionIndex: number) => {
     const sectionRef = sectionRefs[sectionIndex];
     if (sectionRef && sectionRef.current) {
-      console.log("scrolling to section: " + sectionIndex);
       sectionRef.current.scrollIntoView({ behavior: "smooth" });
       setActiveSection(sectionIndex);
     }
@@ -213,13 +210,11 @@ const ScrollScreen = ({
   const handleNextClick = () => {
     // Directly access the ScrollTrigger instance for the current section
     const currentTrigger = ScrollTrigger.getById(`section-${activeSection}`);
-    console.log("Next clicked with current section being: " + activeSection);
 
     if (currentTrigger) {
       // Check the current progress of the ScrollTrigger instance
       if (currentTrigger.progress < 0.99) {
         // If not fully scrolled, scroll to the end of the current section
-        console.log("Current trigger progress is less than 0.99");
         scrollToSection(activeSection); // Assuming this scrolls to the end if already at the start
       } else {
         // Check if activeSection is less than 4
@@ -229,7 +224,6 @@ const ScrollScreen = ({
           scrollToSection(nextSection);
         } else {
           // If activeSection is 4, just scroll to the current section again (effectively doing nothing)
-          console.log("Current section is 4");
           scrollToSection(activeSection);
         }
       }
@@ -237,7 +231,6 @@ const ScrollScreen = ({
   };
 
   const handlePrevClick = () => {
-    console.log("Prev clicked with current section being: " + activeSection);
     if (activeSection > 0) {
       const prevSection = activeSection - 1;
       setActiveSection(prevSection); // Aktualisiert den Zustand sofort

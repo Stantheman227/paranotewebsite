@@ -148,11 +148,11 @@ export default function ParanoteInfoSection() {
             <div className="w-full h-max order-2 space-y-5">
               {" "}
               <div>
-                <h2 className="text-[44px] font-medium mb-5">
+                <h2 className="text-[38px] font-medium mb-5">
                   {" "}
                   Die App, die auf Dich hört{" "}
                 </h2>
-                <p className="text-[24px] font-light">
+                <p className="text-[20px] font-light">
                   Entwickle gemeinsam mit uns Deine maßgeschneiderte Lernapp.
                   Paranote ist aktuell in der Entwicklungsphase, was es jedem
                   Benutzer ermöglicht, aktiv am Produkt mitzuwirken. Nutze die
@@ -191,11 +191,11 @@ export default function ParanoteInfoSection() {
             <div className="w-full h-max order-4 md:order-3">
               {" "}
               <div>
-                <h2 className="text-[44px] font-medium mb-5">
+                <h2 className="text-[38px] font-medium mb-5">
                   {" "}
                   Paranote macht&rsquo;s einfach
                 </h2>
-                <p className="text-[24px] font-light">
+                <p className="text-[20px] font-light">
                   Mit Paranote erhältst Du Zugriff auf die aktuellsten Fassungen
                   von über 5000 deutschen Gesetzen, die kontinuierlich auf den
                   neuesten Stand gebracht werden. Nutze die Möglichkeit,
@@ -221,11 +221,11 @@ export default function ParanoteInfoSection() {
             <div className="w-full h-max order-6">
               {" "}
               <div>
-                <h2 className="text-[44px] font-medium mb-5">
+                <h2 className="text-[38px] font-medium mb-5">
                   {" "}
                   Moderne Recherche
                 </h2>
-                <p className="text-[24px] font-light">
+                <p className="text-[20px] font-light">
                   Paranote hat das Ziel, die Digitalisierung in der
                   Rechtswissenschaft deutlich voranzubringen. Es geht darum,
                   juristische Recherchen neu zu konzipieren, indem es die Suche

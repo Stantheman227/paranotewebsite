@@ -242,7 +242,7 @@ export default function Home() {
               >
                 <div className="absolute left-0 right-0 flex justify-center opacity-0 group-hover:opacity-100 duration-300 font-thin hover:font-light"></div>
                 <div className="z-10 flex flex-col items-center justify-center hover:p-0 pt-4 h-full w-full">
-                  <div className="flex flex-row space-x-2 items-center justify-center">
+                  <div className="flex flex-row space-x-2 items-center justify-center ">
                     {" "}
                     <p className="text-white text-sm">Download</p>
                     <ArrowDownIcon className="text-white w-3 h-3 font-semibold" />

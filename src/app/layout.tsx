@@ -24,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="de">
       <body className={inter.className}>
+        <link rel="icon" href="src/app/favicon.ico" />
         {children} <Analytics />
         <SpeedInsights />
       </body>

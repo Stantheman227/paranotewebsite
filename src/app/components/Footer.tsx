@@ -18,6 +18,9 @@ const Footer = () => {
           <Link href="/FAQ" className="hover:underline">
             FAQ
           </Link>
+          <Link href="/Updates" className="hover:underline">
+            Updates
+          </Link>
         </div>
         <div className="text-sm text-gray-600">© 2022-2024 Paranote</div>
       </div>

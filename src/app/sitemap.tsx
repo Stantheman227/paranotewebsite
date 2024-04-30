@@ -26,5 +26,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.5,
     },
+    {
+      url: "https://paranote.de/Updates",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.25,
+    },
   ];
 }

@@ -48,21 +48,6 @@ const YouTubeModal: React.FC<YouTubeModalProps> = ({
         }}
       >
         <button
-          onClick={handleExpandClick}
-          style={{
-            margin: "0 10px",
-            padding: "5px",
-            backgroundColor: "transparent",
-            border: "none",
-            borderRadius: "50%",
-            cursor: "pointer",
-            color: "white",
-          }}
-          aria-label={isExpanded ? "Minimize" : "Expand"}
-        >
-          {isExpanded ? <MinimizeIcon /> : <ExpandIcon />}
-        </button>
-        <button
           onClick={onClose}
           style={{
             padding: "5px",

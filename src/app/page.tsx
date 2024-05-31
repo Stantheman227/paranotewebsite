@@ -9,9 +9,9 @@ import ScrollingScreen from "./components/ScrollingScreen/ScrollingScreen";
 import HandySection from "./components/HandySection/HandySections";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import YouTubeModal from "./components/YoutubePlayer/YouTubeModal";
 
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
-import { ArrowDownIcon } from "@heroicons/react/24/solid";
+import { ChevronDownIcon, PlayIcon } from "@heroicons/react/24/outline";
 import { SiApple } from "react-icons/si";
 
 export default function Home() {
@@ -32,6 +32,14 @@ export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [logoSource, setLogoSource] = useState("/ParaNoteLogoLM@3x.png");
 
+  // FOR YOUTUBE VIDEO
+  const [showVideo, setShowVideo] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const openVideoModal = () => setShowVideo(true);
+  const closeVideoModal = () => setShowVideo(false);
+
+  // NAVIGATION
   const navigation = [
     { name: "Home", action: () => scrollToTop() },
     { name: "Features", action: () => scrollToSection(blackSectionRef) },
@@ -245,6 +253,29 @@ export default function Home() {
                   </span>
                 </button>
               </Link>
+            </div>
+
+            <div
+              className="fixed z-60 cursor-pointer bottom-8 right-8 w-20 h-20 flex items-center justify-center"
+              style={{
+                zIndex: 60,
+              }}
+            >
+              <button
+                className="z-90 flex items-center justify-center w-12 h-12 hover:w-14 hover:h-14 transform ease-in-out duration-200 bg-[#6e6af6] rounded-full border-none cursor-pointer hover:bg-blue-600 group"
+                onClick={openVideoModal}
+                aria-label="Play Video"
+              >
+                <PlayIcon className="w-6 h-6 text-white transform transition-all ease-in-out duration-200 group-hover:w-8 group-hover:h-8" />
+              </button>
+              {showVideo && (
+                <YouTubeModal
+                  videoId="eDvPk3BKjOk"
+                  onClose={closeVideoModal}
+                  isExpanded={isExpanded}
+                  setIsExpanded={setIsExpanded}
+                />
+              )}
             </div>
 
             <div

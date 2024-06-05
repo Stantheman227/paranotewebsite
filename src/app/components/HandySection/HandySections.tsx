@@ -74,7 +74,7 @@ const HandySection: React.FC<HandySectionProps> = ({
             </button>
             {showVideo && (
               <YouTubeModalMobil
-                videoId="eDvPk3BKjOk"
+                videoId="vS1jnlWK8iM"
                 onClose={closeVideoModal}
                 isExpanded={isExpanded}
                 setIsExpanded={setIsExpanded}
